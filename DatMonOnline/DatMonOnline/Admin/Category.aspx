@@ -41,7 +41,8 @@
                                                 </div>
                                             
                                                 <div class="pb-5">
-                                                    <asp:Button ID="btnAdd0rUpdate" runat="server" Text="Add" CssClass="btn btn-primary"/>
+                                                    <asp:Button ID="btnAdd0rUpdate" runat="server" Text="Add" CssClass="btn btn-primary"
+                                                        OnClick="btnAdd0rUpdate_Click"/>
                                                     &nbsp;
                                                     <asp:Button ID="btnClear" runat="server" Text="Clear" CssClass="btn btn-primary"
                                                     CausesValidation="false" />
