@@ -48,9 +48,14 @@ namespace DatMonOnline.Admin
             if (fuCategoryImage.HasFile)
             {
                 // trong phương thức KetNoi
-                if (Utils)
+                if (Utils.IsValidExtention(fuCategoryImage.FileName))
                 {
-
+                    Guid obj = Guid.NewGuid();
+                    fileExtention = Path.GetExtension(fuCategoryImage.FileName);
+                    imagePath = "Images/Category/" + obj.ToString() + fileExtention;
+                    fuCategoryImage.PostedFile.SaveAs(Server.MapPath("~/Images/Category/") + obj.ToString() + fileExtention);
+                    cmd.Parameters.AddWithValue("@ImageUrl", imagePath);
+                    isValidToExcute = true;
                 }
                 else
                 {
