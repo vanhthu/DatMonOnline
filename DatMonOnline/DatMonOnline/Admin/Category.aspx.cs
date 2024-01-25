@@ -59,14 +59,20 @@ namespace DatMonOnline.Admin
                 }
                 else
                 {
-                    
+                    lbMessage.Visible = true;
+                    lbMessage.Text = "Vui lòng chọn hình .jpg, .jpeg hoặc .png";
+                    lbMessage.CssClass = "alert alert-danger";
+                    isValidToExcute = false;
                 }
             }
             else
             {
-
+                isValidToExcute=true;
             }
-
+            if (isValidToExcute)
+            {
+                // chưa có viết gì hết
+            }
         }
     }
 }
