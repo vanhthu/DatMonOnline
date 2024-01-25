@@ -6,6 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.UI.WebControls.WebParts;
+using System.Configuration;
+using System.IO;
 namespace DatMonOnline.Admin
 {
     
@@ -28,7 +31,36 @@ namespace DatMonOnline.Admin
             string fileExtention = string.Empty;
 
             bool isValidToExcute = false;
-            int categoryID = Convert.ToInt32(hdnId.Value);
+            int categoryID = Convert.ToInt32(hdnId.Value); // Hidden file
+
+
+            // kết nối CSDL
+            // lấy từ class
+            cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
+            cmd = new SqlCommand("Category_Crud", cn);
+
+            cmd.Parameters.AddWithValue("@Action", categoryID == 0 ? "INSERT" : "UPDATE");
+            cmd.Parameters.AddWithValue("@CategoryID", categoryID);
+            cmd.Parameters.AddWithValue("@Name", txtName.Text.Trim());
+            cmd.Parameters.AddWithValue("@IsActive", cbIsActive.Checked);
+
+            // xử lý hình ảnh 
+            if (fuCategoryImage.HasFile)
+            {
+                // trong phương thức KetNoi
+                if (Utils)
+                {
+
+                }
+                else
+                {
+                    
+                }
+            }
+            else
+            {
+
+            }
 
         }
     }
