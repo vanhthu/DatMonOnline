@@ -34,8 +34,26 @@
   <link href="../Style/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="../Style/css/responsive.css" rel="stylesheet" />
+
+  <script src="../Style/js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            // this will get the ull URL at the address bar
+            var url = window.location.href;
+            // passes on every "a" tag
+            $("#navbarSupportedContent a").each(function () {
+                // checks if its the same on the address bar
+                if (url == (this.href)) {
+                    $(this).closest("li").addClass("active");
+                }
+            });
+        });
+    </script>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -60,8 +78,8 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  mx-auto ">
-              <li class="nav-item active">
-                <a class="nav-link" href="TrangChu.aspx">Home <span class="sr-only">(current)</span></a>
+              <li class="nav-item">
+                <a class="nav-link" href="TrangChu.aspx">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Menu.aspx">Menu</a>
@@ -242,8 +260,8 @@
 
     </form>
 
-    <!-- jQery -->
-  <script src="../Style/js/jquery-3.4.1.min.js"></script>
+  <!-- jQery -->
+<%--  <script src="../Style/js/jquery-3.4.1.min.js"></script>--%>
   <!-- popper js -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
