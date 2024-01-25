@@ -67,6 +67,8 @@
   <ItemGroup>
     <Content Include="checkerror\error.txt" />
     <Content Include="Global.asax" />
+    <Content Include="NguoiDung\Menu.aspx" />
+    <Content Include="NguoiDung\SliderUserControl.ascx" />
     <Content Include="NguoiDung\TrangChu.aspx" />
     <Content Include="Style\css\bootstrap.css" />
     <Content Include="Style\css\font-awesome.min.css" />
@@ -97,12 +99,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="NguoiDung\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NguoiDung\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NguoiDung\NguoiDung.Master.cs">
       <DependentUpon>NguoiDung.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="NguoiDung\NguoiDung.Master.designer.cs">
       <DependentUpon>NguoiDung.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NguoiDung\SliderUserControl.ascx.cs">
+      <DependentUpon>SliderUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NguoiDung\SliderUserControl.ascx.designer.cs">
+      <DependentUpon>SliderUserControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="NguoiDung\TrangChu.aspx.cs">
       <DependentUpon>TrangChu.aspx</DependentUpon>
