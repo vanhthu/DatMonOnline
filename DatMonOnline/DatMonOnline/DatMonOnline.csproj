@@ -67,6 +67,8 @@
   <ItemGroup>
     <Content Include="checkerror\error.txt" />
     <Content Include="Global.asax" />
+    <Content Include="NguoiDung\About.aspx" />
+    <Content Include="NguoiDung\Contact.aspx" />
     <Content Include="NguoiDung\Menu.aspx" />
     <Content Include="NguoiDung\SliderUserControl.ascx" />
     <Content Include="NguoiDung\TrangChu.aspx" />
@@ -98,6 +100,20 @@
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="NguoiDung\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NguoiDung\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NguoiDung\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NguoiDung\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="NguoiDung\Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
