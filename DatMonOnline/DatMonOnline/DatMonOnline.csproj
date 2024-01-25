@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="checkerror\error.txt" />
     <Content Include="Global.asax" />
     <Content Include="NguoiDung\TrangChu.aspx" />
     <Content Include="Style\css\bootstrap.css" />
