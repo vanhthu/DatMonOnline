@@ -146,9 +146,11 @@
     </header>
     <!-- end header section -->
     <!-- slider section -->
-    <%-- thêm user control vào cho phần slider --%>
 
-            <uc1:SliderUserControl runat="server" id="SliderUserControl" />
+    <%-- thêm user control vào cho phần slider --%>
+    <%--<uc1:SliderUserControl runat="server" id="SliderUserControl" />--%>
+            <asp:Panel ID="panelSlider" runat="server"></asp:Panel>
+
 
     <!-- end slider section -->
   </div>
