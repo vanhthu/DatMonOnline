@@ -32,7 +32,8 @@
                                                 <div class="form-group">
                                                     <label>Category Image</label>
                                                     <div>
-                                                        <asp:FileUpload ID="fuCategoryImage" runat="server" CssClass="form-control" onchange="ImagePreview(this);"/>
+                                                        <asp:FileUpload ID="fuCategoryImage" runat="server" CssClass="form-control" 
+                                                            onchange="ImagePreview(this);"/>
                                                     </div>
                                                 </div>
                                                 <div class="form-check pl-4">

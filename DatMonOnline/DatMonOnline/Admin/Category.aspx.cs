@@ -20,5 +20,9 @@ namespace DatMonOnline.Admin
 
         }
 
+        protected void btnAdd0rUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
