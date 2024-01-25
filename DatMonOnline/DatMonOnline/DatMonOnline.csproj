@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Category.aspx" />
     <Content Include="Admin\GiaoDienChinh.aspx" />
     <Content Include="assets\css\animate.css\css\animate.css" />
     <Content Include="assets\css\bootstrap\css\bootstrap.min.css" />
@@ -191,6 +192,13 @@
     </Compile>
     <Compile Include="Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Category.aspx.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Category.aspx.designer.cs">
+      <DependentUpon>Category.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\GiaoDienChinh.aspx.cs">
       <DependentUpon>GiaoDienChinh.aspx</DependentUpon>
