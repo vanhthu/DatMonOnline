@@ -9,6 +9,8 @@ using System.Data.SqlClient;
 using System.Web.UI.WebControls.WebParts;
 using System.Configuration;
 using System.IO;
+using System.Drawing.Printing;
+
 namespace DatMonOnline.Admin
 {
     
@@ -71,8 +73,38 @@ namespace DatMonOnline.Admin
             }
             if (isValidToExcute)
             {
-                // chưa có viết gì hết
+                cmd.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                    actionName = categoryID == 0 ? "inserted" : "updated";
+                    lbMessage.Visible = true;
+                    lbMessage.Text = "Category " + actionName + " thành công!";
+                    lbMessage.CssClass = "alert alert-success";
+
+                    // phương thức xóa trắng các giá trị
+                    khoitao();
+                }
+                catch(Exception ex)
+                {
+                    lbMessage.Visible = true;
+                    lbMessage.Text = "Không thành công "+ex.Message;
+                    lbMessage.CssClass = "alert alert-danger";
+                }
+                finally
+                {
+                    cn.Close();
+                }
             }
+        }
+
+        private void khoitao()
+        {
+            txtName.Text = String.Empty;
+            cbIsActive.Checked = false;
+            hdnId.Value = "0";
+            btnAdd0rUpdate.Text = "Add";
         }
     }
 }

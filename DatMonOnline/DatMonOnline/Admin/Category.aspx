@@ -1,6 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Category.aspx.cs" Inherits="DatMonOnline.Admin.Category" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script>
+
+    </script>
+
+    <script>
+
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
