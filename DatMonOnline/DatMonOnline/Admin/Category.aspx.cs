@@ -22,6 +22,13 @@ namespace DatMonOnline.Admin
 
         protected void btnAdd0rUpdate_Click(object sender, EventArgs e)
         {
+            // tạo biến
+            string actionName = string.Empty;
+            string imagePath = string.Empty;
+            string fileExtention = string.Empty;
+
+            bool isValidToExcute = false;
+            int categoryID = Convert.ToInt32(hdnId.Value);
 
         }
     }
