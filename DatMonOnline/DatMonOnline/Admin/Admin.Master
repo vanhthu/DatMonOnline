@@ -89,9 +89,9 @@
                         <a class="mobile-menu" id="mobile-collapse" href="#!">
                             <i class="ti-menu"></i>
                         </a>
-                        <a class="mobile-search morphsearch-search" href="#">
+                        <%--<a class="mobile-search morphsearch-search" href="#">
                             <i class="ti-search"></i>
-                        </a>
+                        </a>--%>
                         <a href="index.html">
                             <img class="img-fluid" src="../assets/images/logo.png" alt="Theme-Logo" />
                         </a>
@@ -113,7 +113,7 @@
                             </li>
                         </ul>
                         <ul class="nav-right">
-                            <li class="header-notification">
+                            <%--<li class="header-notification">
                                 <a href="#!">
                                     <i class="ti-bell"></i>
                                     <span class="badge bg-c-pink"></span>
@@ -154,7 +154,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                            </li>
+                            </li>--%>
                             <li class="user-profile header-notification">
                                 <a href="#!">
                                     <img src="../assets/images/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
@@ -162,7 +162,7 @@
                                     <i class="ti-angle-down"></i>
                                 </a>
                                 <ul class="show-notification profile-notification">
-                                    <li>
+                                    <%--<li>
                                         <a href="#!">
                                             <i class="ti-settings"></i> Settings
                                         </a>
@@ -181,7 +181,7 @@
                                         <a href="#">
                                             <i class="ti-lock"></i> Lock Screen
                                         </a>
-                                    </li>
+                                    </li>--%>
                                     <li>
                                         <a href="auth-normal-sign-in.html">
                                             <i class="ti-layout-sidebar-left"></i> Logout
@@ -198,7 +198,7 @@
                     <nav class="pcoded-navbar">
                         <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
                         <div class="pcoded-inner-navbar main-menu">
-                            <div class="">
+                            <%--<div class="">
                                 <div class="main-menu-header">
                                     <img class="img-40 img-radius" src="../assets/images/avatar-4.jpg" alt="User-Profile-Image">
                                     <div class="user-details">
@@ -216,24 +216,24 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            <div class="pcoded-search">
+                            </div>--%>
+                            <%--<div class="pcoded-search">
                                 <span class="searchbar-toggle">  </span>
                                 <div class="pcoded-search-box ">
                                     <input type="text" placeholder="Search">
                                     <span class="search-icon"><i class="ti-search" aria-hidden="true"></i></span>
                                 </div>
-                            </div>
-                            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Layout</div>
+                            </div>--%>
+                            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.navigation">Overview</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="active">
-                                    <a href="index.html">
+                                    <a href="GiaoDienChinh.aspx">
                                         <span class="pcoded-micon"><i class="ti-home"></i><b>D</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.dash.main">Dashboard</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
-                                <li class="pcoded-hasmenu">
+                                <%--<li class="pcoded-hasmenu">
                                     <a href="javascript:void(0)">
                                         <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
                                         <span class="pcoded-mtext"  data-i18n="nav.basic-components.main">Components</span>
@@ -312,37 +312,37 @@
                                         </li>
 
                                     </ul>
-                                </li>
+                                </li>--%>
                             </ul>
-                            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Forms &amp; Tables</div>
+                            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Category Crud</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li>
                                     <a href="form-elements-component.html">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                        <span class="pcoded-mtext" data-i18n="nav.form-components.main">Form Components</span>
+                                        <span class="pcoded-mtext" data-i18n="nav.form-components.main">Categories</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
-                                <li>
+                                <%--<li>
                                     <a href="bs-basic-table.html">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">Basic Table</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
-                                </li>
+                                </li>--%>
                                 
                             </ul>
 
-                            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Chart &amp; Maps</div>
+                            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Product Crud</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li>
                                     <a href="chart.html">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
-                                        <span class="pcoded-mtext" data-i18n="nav.form-components.main">Chart</span>
+                                        <span class="pcoded-mtext" data-i18n="nav.form-components.main">Product</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
-                                <li>
+                                <%--<li>
                                     <a href="map-google.html">
                                         <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                         <span class="pcoded-mtext" data-i18n="nav.form-components.main">Maps</span>
@@ -378,19 +378,19 @@
                                             </a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li>--%>
                                 
                             </ul>
 
-                            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">Other</div>
+                            <div class="pcoded-navigatio-lavel" data-i18n="nav.category.other">Trạng thái giao hàng</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li class="pcoded-hasmenu ">
-                                    <a href="javascript:void(0)">
+                                    <a href="#">
                                         <span class="pcoded-micon"><i class="ti-direction-alt"></i><b>M</b></span>
-                                        <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Menu Levels</span>
+                                        <span class="pcoded-mtext" data-i18n="nav.menu-levels.main">Cập nhật trạng thái</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
-                                    <ul class="pcoded-submenu">
+                                    <%--<ul class="pcoded-submenu">
                                         <li class="">
                                             <a href="javascript:void(0)">
                                                 <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
@@ -422,7 +422,7 @@
                                             </a>
                                         </li>
 
-                                    </ul>
+                                    </ul>--%>
                                 </li>
                             </ul>
                         </div>
