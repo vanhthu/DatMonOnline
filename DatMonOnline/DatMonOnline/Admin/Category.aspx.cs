@@ -39,6 +39,8 @@ namespace DatMonOnline.Admin
             // kết nối CSDL
             // lấy từ class
             cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
+
+            // tạo store procedure
             cmd = new SqlCommand("Category_Crud", cn);
 
             cmd.Parameters.AddWithValue("@Action", categoryID == 0 ? "INSERT" : "UPDATE");
