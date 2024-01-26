@@ -41,9 +41,9 @@ namespace DatMonOnline.Admin
             cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
 
             // tạo store procedure
-            cmd = new SqlCommand("Category_Crud", cn);
+            cmd = new SqlCommand("CATEGORY_CRUD", cn);
 
-            cmd.Parameters.AddWithValue("@Action", categoryID == 0 ? "INSERT" : "UPDATE");
+            cmd.Parameters.AddWithValue("@action", categoryID == 0 ? "INSERT" : "UPDATE");
             cmd.Parameters.AddWithValue("@categoryID", categoryID);
             cmd.Parameters.AddWithValue("@name", txtName.Text.Trim());
             cmd.Parameters.AddWithValue("@isActive", cbIsActive.Checked);
