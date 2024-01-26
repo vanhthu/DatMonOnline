@@ -2,11 +2,26 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script>
-
+        window.onload = function () {
+            var giay = 5;
+            setTimeout(function () {
+                document.getElementById("<%=lbMessage.ClientID%>").style.display = "none";
+            }, giay * 1000);
+        };
     </script>
 
     <script>
+        function ImagePreview(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#<%=imgCategory.ClientID%>').prop('src', e.target.result).width(200).height(200);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
 
+        }
+        
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

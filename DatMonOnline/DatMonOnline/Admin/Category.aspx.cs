@@ -42,9 +42,9 @@ namespace DatMonOnline.Admin
             cmd = new SqlCommand("Category_Crud", cn);
 
             cmd.Parameters.AddWithValue("@Action", categoryID == 0 ? "INSERT" : "UPDATE");
-            cmd.Parameters.AddWithValue("@CategoryID", categoryID);
-            cmd.Parameters.AddWithValue("@Name", txtName.Text.Trim());
-            cmd.Parameters.AddWithValue("@IsActive", cbIsActive.Checked);
+            cmd.Parameters.AddWithValue("@categoryID", categoryID);
+            cmd.Parameters.AddWithValue("@name", txtName.Text.Trim());
+            cmd.Parameters.AddWithValue("@isActive", cbIsActive.Checked);
 
             // xử lý hình ảnh 
             if (fuCategoryImage.HasFile)
@@ -56,7 +56,7 @@ namespace DatMonOnline.Admin
                     fileExtention = Path.GetExtension(fuCategoryImage.FileName);
                     imagePath = "Images/Category/" + obj.ToString() + fileExtention;
                     fuCategoryImage.PostedFile.SaveAs(Server.MapPath("~/Images/Category/") + obj.ToString() + fileExtention);
-                    cmd.Parameters.AddWithValue("@ImageUrl", imagePath);
+                    cmd.Parameters.AddWithValue("@imageURL", imagePath);
                     isValidToExcute = true;
                 }
                 else
