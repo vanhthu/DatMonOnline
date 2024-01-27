@@ -1,4 +1,7 @@
-﻿- check lỗi khi mở project
+﻿
+
+
+- fix lỗi khi mở project
 
 1. Tools
 2. Nuget Package Manager
