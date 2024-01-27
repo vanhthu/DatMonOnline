@@ -71,7 +71,7 @@
                                                         OnClick="btnAdd0rUpdate_Click" />
                                                     &nbsp;
                                                     <asp:Button ID="btnClear" runat="server" Text="Xóa" CssClass="btn btn-primary"
-                                                        CausesValidation="false" />
+                                                        CausesValidation="false" OnClick="btnClear_Click"/>
                                                 </div>
                                                 <div>
                                                     <asp:Image ID="imgCategory" runat="server" CssClass="img-thumbnail" />

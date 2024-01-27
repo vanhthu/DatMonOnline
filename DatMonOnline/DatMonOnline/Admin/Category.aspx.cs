@@ -84,9 +84,9 @@ namespace DatMonOnline.Admin
                     lbMessage.Visible = true;
                     lbMessage.Text = "Category " + actionName + " thành công!";
                     lbMessage.CssClass = "alert alert-success";
-
+                    laydanhmuc();
                     // phương thức xóa trắng các giá trị
-                    khoitao();
+                    clear();
                 }
                 catch(Exception ex)
                 {
@@ -101,12 +101,30 @@ namespace DatMonOnline.Admin
             }
         }
 
-        private void khoitao()
+        private void laydanhmuc()
+        {
+            cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
+            cmd = new SqlCommand("CATEGORY_CRUD", cn);
+            cmd.Parameters.AddWithValue("@action", "SELECT");
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            da = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+            da.Fill(dt);
+            // thêm vào datagridview
+        }
+
+        private void clear()
         {
             txtName.Text = String.Empty;
             cbIsActive.Checked = false;
             hdnId.Value = "0";
             btnAdd0rUpdate.Text = "Add";
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            clear();
         }
     }
 }
