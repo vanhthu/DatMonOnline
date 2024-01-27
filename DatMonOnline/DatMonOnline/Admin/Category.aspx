@@ -41,6 +41,8 @@
                                 </div>
                                 <div class="card-block">
                                     <div class="row">
+
+
                                         <div class="col-sm-6 col-md-4 col-lg-4">
                                             <h4 class="sub-title">Danh mục</h4>
                                             <div>
@@ -78,6 +80,16 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div class="col-sm-6 col-md-8 col-lg-8 mobile-inputs">
+                                            <h4 class="sub-title"> Danh sách danh mục</h4>
+                                            <div class="card-block table-border-style">
+                                                <div class="table-responsive">
+                                                    <asp:Repeater ID="repeatCategory" runat="server"></asp:Repeater>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>

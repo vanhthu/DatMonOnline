@@ -80,9 +80,9 @@ namespace DatMonOnline.Admin
                 {
                     cn.Open();
                     cmd.ExecuteNonQuery();
-                    actionName = categoryID == 0 ? "inserted" : "updated";
+                    actionName = categoryID == 0 ? "được thêm" : "được cập nhật";
                     lbMessage.Visible = true;
-                    lbMessage.Text = "Category " + actionName + " thành công!";
+                    lbMessage.Text = "Danh mục " + actionName + " thành công!";
                     lbMessage.CssClass = "alert alert-success";
                     laydanhmuc();
                     // phương thức xóa trắng các giá trị
@@ -112,6 +112,8 @@ namespace DatMonOnline.Admin
             dt = new DataTable();
             da.Fill(dt);
             // thêm vào datagridview
+
+
         }
 
         private void clear()
