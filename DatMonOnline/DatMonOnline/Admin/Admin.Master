@@ -141,7 +141,7 @@
                                 <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Danh mục CRUD</div>
                                 <ul class="pcoded-item pcoded-left-item">
                                     <li>
-                                        <a href="form-elements-component.html">
+                                        <a href="Category.aspx">
                                             <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                             <span class="pcoded-mtext" data-i18n="nav.form-components.main">Danh mục</span>
                                             <span class="pcoded-mcaret"></span>
