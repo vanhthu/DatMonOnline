@@ -49,7 +49,6 @@
                                                 <div class="form-group">
                                                     <label>Tên món ăn</label>
                                                     <div>
-                                                        <%-- toolbox  --%>
                                                         <asp:TextBox ID="txtName" runat="server" CssClass="form-control"
                                                             placeholder="Nhập vào tên món ăn..." required></asp:TextBox>
                                                         <asp:HiddenField ID="hdnId" runat="server" Value="0" />
@@ -82,10 +81,32 @@
                                         </div>
 
                                         <div class="col-sm-6 col-md-8 col-lg-8 mobile-inputs">
-                                            <h4 class="sub-title"> Danh sách danh mục</h4>
+                                            <h4 class="sub-title">Bảng thông tin</h4>
                                             <div class="card-block table-border-style">
                                                 <div class="table-responsive">
-                                                    <asp:Repeater ID="repeatCategory" runat="server"></asp:Repeater>
+                                                    <asp:Repeater ID="repeatCategory" runat="server">
+                                                        <HeaderTemplate>
+                                                            <table>
+                                                                <tr>
+                                                                    <th>Tên</th>
+                                                                    <th>Hình ảnh</th>
+                                                                    <th>IsActive</th>
+                                                                    <th>Ngày tạo</th>
+                                                                    <th>Hành động</th>
+                                                                </tr>
+                                                            </table>
+                                                        </HeaderTemplate> 
+
+                                                        <ItemTemplate>
+                                                            <tr>
+                                                                <td> <%# Eval("name") %> </td>
+                                                                <td> <%# Eval("imageURL") %> </td>
+                                                                <td> <%# Eval("isActive") %> </td>
+                                                                <td> <%# Eval("ngaytao") %> </td>
+                                                                <td> <%# Eval("action") %> </td>
+                                                            </tr>
+                                                        </ItemTemplate>
+                                                    </asp:Repeater>
                                                 </div>
                                             </div>
                                         </div>
@@ -98,4 +119,5 @@
                 </div>
             </div>
         </div>
+    </div>
 </asp:Content>

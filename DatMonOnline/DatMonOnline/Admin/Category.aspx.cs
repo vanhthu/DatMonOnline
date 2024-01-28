@@ -22,7 +22,11 @@ namespace DatMonOnline.Admin
         DataTable dt;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                Session["breadCrum"] = "Category";
+            }
+            lbMessage.Visible = false;
         }
 
         protected void btnAdd0rUpdate_Click(object sender, EventArgs e)
@@ -111,7 +115,9 @@ namespace DatMonOnline.Admin
             da = new SqlDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);
-            // thêm vào datagridview
+            // thêm dữ liệu bằng repeater
+            repeatCategory.DataSource = dt;
+            repeatCategory.DataBind();
 
 
         }

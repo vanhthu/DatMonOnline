@@ -218,9 +218,9 @@
                                                     <i class="icofont icofont-home"></i>
                                                 </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Breadcrumb</a>
+                                            <li class="breadcrumb-item"><a href="GiaoDienChinh.aspx">Trang chủ</a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#!">Caption Breadcrumb</a>
+                                            <li class="breadcrumb-item"><a href="#!"> <%Response.Write(Session["breadCrum"]); %> </a>
                                             </li>
                                         </ul>
                                     </div>
