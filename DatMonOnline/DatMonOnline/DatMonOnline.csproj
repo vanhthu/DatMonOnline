@@ -153,7 +153,7 @@
     <Content Include="assets\pages\widget\amchart\serial.min.js" />
     <Content Include="assets\pages\widget\amchart\worldLow.js" />
     <Content Include="assets\pages\widget\amchart\worldLow.min.js" />
-    <Content Include="checkerror\error.txt" />
+    <Content Include="fixerror\error.txt" />
     <Content Include="Global.asax" />
     <Content Include="NguoiDung\About.aspx" />
     <Content Include="NguoiDung\Contact.aspx" />
