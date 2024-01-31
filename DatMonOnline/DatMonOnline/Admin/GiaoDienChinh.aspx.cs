@@ -13,7 +13,7 @@ namespace DatMonOnline.Admin
         {
             if (!IsPostBack)
             {
-                Session["breadcrum"] = " ";
+                Session["breadcrum"] = "";
             }
         }
     }

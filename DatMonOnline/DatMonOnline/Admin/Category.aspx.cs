@@ -25,6 +25,7 @@ namespace DatMonOnline.Admin
             if (!IsPostBack)
             {
                 Session["breadCrum"] = "Category";
+                LayDuLieu();
             }
             lbMessage.Visible = false;
         }
@@ -88,7 +89,7 @@ namespace DatMonOnline.Admin
                     lbMessage.Visible = true;
                     lbMessage.Text = "Danh mục " + actionName + " thành công!";
                     lbMessage.CssClass = "alert alert-success";
-                    laydanhmuc();
+                    LayDuLieu();
                     // phương thức xóa trắng các giá trị
                     clear();
                 }
@@ -105,7 +106,7 @@ namespace DatMonOnline.Admin
             }
         }
 
-        private void laydanhmuc()
+        private void LayDuLieu()
         {
             cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
             cmd = new SqlCommand("CATEGORY_CRUD", cn);

@@ -103,9 +103,10 @@
                                                                 <td> <%# Eval("imageURL") %> </td>
                                                                 <td> <%# Eval("isActive") %> </td>
                                                                 <td> <%# Eval("ngaytao") %> </td>
-                                                                <td> <%# Eval("action") %> </td>
+                                                                <td></td>
                                                             </tr>
                                                         </ItemTemplate>
+
                                                     </asp:Repeater>
                                                 </div>
                                             </div>
