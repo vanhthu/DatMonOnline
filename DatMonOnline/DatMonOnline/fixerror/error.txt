@@ -12,3 +12,4 @@
 Cuối cùng paste đường dẫn bên dưới => ENTER
 
 Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r
+jhfgdhsfg
