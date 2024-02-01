@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="Category.aspx.cs" Inherits="DatMonOnline.Admin.Category" %>
-
+<%@ Import Namespace="DatMonOnline" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script>
         window.onload = function () {
@@ -86,25 +86,34 @@
                                                     <asp:Repeater ID="repeatCategory" runat="server">
                                                         <HeaderTemplate>
                                                             <table class="table data-table-export table-hover nowrap">
-                                                                <tr>
+                                                                <thead>
+                                                                    <tr>
                                                                     <th class="table-plus">Tên</th>
                                                                     <th>Hình ảnh</th>
                                                                     <th>IsActive</th>
                                                                     <th>Ngày tạo</th>
                                                                     <th class="datatable-nosort">Hành động</th>
                                                                 </tr>
-                                                            </table>
+                                                                </thead>
+                                                                
+                                                                    <tbody> 
                                                         </HeaderTemplate> 
 
                                                         <ItemTemplate>
                                                             <tr>
-                                                                <td> <%# Eval("name") %> </td>
-                                                                <td> <%# Eval("imageURL") %> </td>
+                                                                <td class="table-plus"> <%# Eval("name") %> </td>
+                                                                <td> 
+                                                                    <img alt="" width="40" src="<%#Utils.LayURLHinhAnh(Eval("imageURL")) %>" />
+                                                                </td>
                                                                 <td> <%# Eval("isActive") %> </td>
                                                                 <td> <%# Eval("ngaytao") %> </td>
                                                                 <td></td>
                                                             </tr>
                                                         </ItemTemplate>
+                                                        <FooterTemplate>
+                                                            </tbody>
+                                                            </table>
+                                                        </FooterTemplate>
 
                                                     </asp:Repeater>
                                                 </div>
