@@ -26,6 +26,14 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/jquery.mCustomScrollbar.css">
     <script type="text/javascript" src="../assets/js/jquery/jquery.min.js"></script>
+
+    <%-- Datatable files start --%>
+    <link rel="stylesheet" type="text/css" href="../assets/datatables/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/datatables/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/datatables/css/icon-font.min.css">
+    <%-- Datatable files end --%>
+
+
     <script>
         $(function () {
             // this will get the ull URL at the address bar
