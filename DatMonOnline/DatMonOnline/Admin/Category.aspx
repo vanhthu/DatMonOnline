@@ -42,7 +42,6 @@
                                 <div class="card-block">
                                     <div class="row">
 
-
                                         <div class="col-sm-6 col-md-4 col-lg-4">
                                             <h4 class="sub-title">Danh mục</h4>
                                             <div>
@@ -86,13 +85,13 @@
                                                 <div class="table-responsive">
                                                     <asp:Repeater ID="repeatCategory" runat="server">
                                                         <HeaderTemplate>
-                                                            <table>
+                                                            <table class="table data-table-export table-hover nowrap">
                                                                 <tr>
-                                                                    <th>Tên</th>
+                                                                    <th class="table-plus">Tên</th>
                                                                     <th>Hình ảnh</th>
                                                                     <th>IsActive</th>
                                                                     <th>Ngày tạo</th>
-                                                                    <th>Hành động</th>
+                                                                    <th class="datatable-nosort">Hành động</th>
                                                                 </tr>
                                                             </table>
                                                         </HeaderTemplate> 
