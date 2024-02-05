@@ -16,13 +16,13 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Tasty Thursdays
+                  Thứ Năm Tuyệt Vời
                 </h5>
                 <h6>
-                  <span>20%</span> Off
+                  <span>20%</span> Giảm giá
                 </h6>
                 <a href="">
-                  Order Now <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                  Đặt hàng ngay <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                     <g>
                       <g>
                         <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
@@ -85,13 +85,13 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Pizza Days
+                  Ngày Của Pizza
                 </h5>
                 <h6>
-                  <span>15%</span> Off
+                  <span>15%</span> Giảm giá
                 </h6>
                 <a href="">
-                  Order Now <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
+                  Đặt hàng ngay <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
                     <g>
                       <g>
                         <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
@@ -169,7 +169,7 @@
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-                We Are Feane
+                Chúng tôi là Feane
               </h2>
             </div>
             <p>
@@ -179,7 +179,7 @@
               the middle of text. All
             </p>
             <a href="">
-              Read More
+              Đọc thêm
             </a>
           </div>
         </div>
@@ -195,7 +195,7 @@
     <div class="container">
       <div class="heading_container heading_center psudo_white_primary mb_45">
         <h2>
-          What Says Our Customers
+          Khách hàng của chúng tôi nói những gì
         </h2>
       </div>
       <div class="carousel-wrap row ">

@@ -79,16 +79,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  mx-auto ">
               <li class="nav-item">
-                <a class="nav-link" href="TrangChu.aspx">Home</a>
+                <a class="nav-link" href="TrangChu.aspx">Trang chủ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Menu.aspx">Menu</a>
+                <a class="nav-link" href="Menu.aspx">Thực đơn</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="About.aspx">About</a>
+                <a class="nav-link" href="About.aspx">Thông tin</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Contact.aspx">Contact</a>
+                <a class="nav-link" href="Contact.aspx">Liên hệ</a>
               </li>
             </ul>
             <div class="user_option">
@@ -155,7 +155,7 @@
                 </button>
               </form>
               <a href="" class="order_online">
-                Order Online
+                Đặt hàng Trực tuyến
               </a>
             </div>
           </div>
@@ -183,19 +183,19 @@
         <div class="col-md-4 footer-col">
           <div class="footer_contact">
             <h4>
-              Contact Us
+              Liên hệ chúng tôi
             </h4>
             <div class="contact_link_box">
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
-                  Location
+                  Vị trí
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  Gọi +01 1234567890
                 </span>
               </a>
               <a href="">
@@ -236,13 +236,13 @@
         </div>
         <div class="col-md-4 footer-col">
           <h4>
-            Opening Hours
+            Giờ mở cửa
           </h4>
           <p>
-            Everyday
+            Mỗi ngày
           </p>
           <p>
-            10.00 Am -10.00 Pm
+            10.00 Sáng -10.00 Tối
           </p>
         </div>
       </div>
