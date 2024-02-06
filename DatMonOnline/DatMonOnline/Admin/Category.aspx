@@ -105,9 +105,14 @@
                                                                 <td> 
                                                                     <img alt="" width="40" src="<%#Utils.LayURLHinhAnh(Eval("imageURL")) %>" />
                                                                 </td>
-                                                                <td> <%# Eval("isActive") %> </td>
+                                                                <td>
+                                                                    <asp:Label ID="lblIsActive" runat="server" Text='<%# Eval("isActive") %>'></asp:Label>
+                                                                </td>
                                                                 <td> <%# Eval("ngaytao") %> </td>
-                                                                <td></td>
+                                                                <td>
+                                                                    <asp:LinkButton ID="LinkButtonEdit" runat="server" CssClass="badge badge-primary" CommandArgument='<%# Eval("categoryID") %>' CommandName="edit" Text="Sửa"> <i class="ti-pencil"></i> </asp:LinkButton> 
+                                                                    <asp:LinkButton ID="LinkButtonDelete" runat="server" CssClass="badge bg-danger" CommandArgument='<%# Eval("categoryID") %>' CommandName="delete" Text="Xóa" OnClientClick="return confirm('Bạn có chắc chắn muốn xóa?');"><i class="ti-trash"></i></asp:LinkButton>
+                                                                </td>
                                                             </tr>
                                                         </ItemTemplate>
                                                         <FooterTemplate>
