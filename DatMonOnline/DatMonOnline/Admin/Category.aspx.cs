@@ -139,9 +139,9 @@ namespace DatMonOnline.Admin
         protected void repeatCategory_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
             lbMessage.Visible = false;
+            cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
             if (e.CommandName == "edit")
             {
-                cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
                 cmd = new SqlCommand("CATEGORY_CRUD", cn);
                 cmd.Parameters.AddWithValue("@action", "GETBYID");
                 cmd.Parameters.AddWithValue("@categoryID", e.CommandArgument);
@@ -164,8 +164,7 @@ namespace DatMonOnline.Admin
 
             }
             else if(e.CommandName == "delete")
-            {
-                cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
+            {                
                 cmd = new SqlCommand("CATEGORY_CRUD", cn);
                 cmd.Parameters.AddWithValue("@action", "DELETE");
                 cmd.Parameters.AddWithValue("@categoryID", e.CommandArgument);
