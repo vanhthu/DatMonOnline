@@ -143,7 +143,7 @@ namespace DatMonOnline.Admin
             {
                 cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
                 cmd = new SqlCommand("CATEGORY_CRUD", cn);
-                cmd.Parameters.AddWithValue("@action", "getbyID");
+                cmd.Parameters.AddWithValue("@action", "GETBYID");
                 cmd.Parameters.AddWithValue("@categoryID", e.CommandArgument);
                 cmd.CommandType = CommandType.StoredProcedure;
 
@@ -160,16 +160,35 @@ namespace DatMonOnline.Admin
 
                 btnAdd0rUpdate.Text = "Update";
                 LinkButton btn = e.Item.FindControl("LinkButtonEdit") as LinkButton;
-                btn.CssClass = "badge  badge-warning";
+                btn.CssClass = "badge badge-warning";
 
             }
             else if(e.CommandName == "delete")
             {
                 cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
                 cmd = new SqlCommand("CATEGORY_CRUD", cn);
-                cmd.Parameters.AddWithValue("@action", "delete");
+                cmd.Parameters.AddWithValue("@action", "DELETE");
                 cmd.Parameters.AddWithValue("@categoryID", e.CommandArgument);
                 cmd.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                    lbMessage.Visible = true;
+                    lbMessage.Text = "Xóa món ăn thành công!";
+                    lbMessage.CssClass = "alert alert-success";
+                    LayDuLieu();
+                }
+                catch(Exception ex)
+                {
+                    lbMessage.Visible = true;
+                    lbMessage.Text = "Lỗi: " + ex.Message;
+                    lbMessage.CssClass = "alert alert-danger";
+                }
+                finally
+                {
+                    cn.Close();
+                }
             }
         }
 
