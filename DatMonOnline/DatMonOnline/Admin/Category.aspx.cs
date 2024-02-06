@@ -135,5 +135,47 @@ namespace DatMonOnline.Admin
         {
             clear();
         }
+
+        protected void repeatCategory_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            lbMessage.Visible = false;
+            if (e.CommandName == "edit")
+            {
+                cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
+                cmd = new SqlCommand("CATEGORY_CRUD", cn);
+                cmd.Parameters.AddWithValue("@action", "getbyID");
+                cmd.Parameters.AddWithValue("@categoryID", e.CommandArgument);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                da = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                da.Fill(dt);
+
+                txtName.Text = dt.Rows[0]["name"].ToString();
+                cbIsActive.Checked = Convert.ToBoolean(dt.Rows[0]["isActive"].ToString());
+                imgCategory.ImageUrl = string.IsNullOrEmpty(dt.Rows[0]["imageURL"].ToString()) ? "../Images/No_image.png" : "../" + dt.Rows[0]["imageURL"].ToString();
+                imgCategory.Width = 200;
+                imgCategory.Height = 200;
+                hdnId.Value = dt.Rows[0]["categoryID"].ToString();
+
+                btnAdd0rUpdate.Text = "Update";
+                LinkButton btn = e.Item.FindControl("LinkButtonEdit") as LinkButton;
+                btn.CssClass = "badge  badge-warning";
+
+            }
+            else if(e.CommandName == "delete")
+            {
+                cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
+                cmd = new SqlCommand("CATEGORY_CRUD", cn);
+                cmd.Parameters.AddWithValue("@action", "delete");
+                cmd.Parameters.AddWithValue("@categoryID", e.CommandArgument);
+                cmd.CommandType = CommandType.StoredProcedure;
+            }
+        }
+
+        protected void repeatCategory_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+
+        }
     }
 }

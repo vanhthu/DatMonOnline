@@ -83,7 +83,7 @@
                                             <h4 class="sub-title">Bảng thông tin</h4>
                                             <div class="card-block table-border-style">
                                                 <div class="table-responsive">
-                                                    <asp:Repeater ID="repeatCategory" runat="server">
+                                                    <asp:Repeater ID="repeatCategory" runat="server" OnItemCommand="repeatCategory_ItemCommand" OnItemDataBound="repeatCategory_ItemDataBound">
                                                         <HeaderTemplate>
                                                             <table class="table data-table-export table-hover nowrap">
                                                                 <thead>
