@@ -114,14 +114,17 @@
                                                 <div class="form-group">
                                                     <label>Danh mục sản phẩm</label>
                                                     <div>                                                        
-                                                        <asp:DropDownList ID="ddlDanhMuc" runat="server" CssClass="form-control" required>
-
+                                                        <asp:DropDownList ID="ddlDanhMuc" runat="server" CssClass="form-control" 
+                                                            DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="categoryID"
+                                                            AppendDataBoundItems="true" >
+                                                            <asp:ListItem Value="0">Lựa chọn danh mục</asp:ListItem>
                                                         </asp:DropDownList>
                                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
                                                             ErrorMessage="Vui lòng nhập vào thông tin!" ForeColor="Red" 
                                                             Display="Dynamic" SetFocusOnError="true"
-                                                            ControlToValidate="txtThongTinSP" >
+                                                            ControlToValidate="ddlDanhMuc" InitialValue="0" >
                                                         </asp:RequiredFieldValidator>
+                                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs %>" SelectCommand="SELECT [categoryID], [name] FROM [PHANLOAI]"></asp:SqlDataSource>
                                                     </div>
                                                 </div>
 
