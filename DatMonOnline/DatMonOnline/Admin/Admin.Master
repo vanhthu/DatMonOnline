@@ -174,7 +174,7 @@
                                 <div class="pcoded-navigatio-lavel" data-i18n="nav.category.forms">Sản phẩm CRUD</div>
                                 <ul class="pcoded-item pcoded-left-item">
                                     <li>
-                                        <a href="chart.html">
+                                        <a href="SanPham.aspx">
                                             <span class="pcoded-micon"><i class="ti-layers"></i><b>FC</b></span>
                                             <span class="pcoded-mtext" data-i18n="nav.form-components.main">Sản phẩm</span>
                                             <span class="pcoded-mcaret"></span>

@@ -13,5 +13,25 @@ namespace DatMonOnline.Admin
         {
 
         }
+
+        protected void btnAdd0rUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void repeatSanPham_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+
+        }
+
+        protected void repeatSanPham_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+
+        }
     }
 }
