@@ -159,7 +159,11 @@
                                                                     <tr>
                                                                     <th class="table-plus">Tên</th>
                                                                     <th>Hình ảnh</th>
+                                                                    <th>Giá</th>
+                                                                    <th>Số lượng</th>
+                                                                    <th>Danh mục</th>
                                                                     <th>IsActive</th>
+                                                                    <th>Mô tả</th>
                                                                     <th>Ngày tạo</th>
                                                                     <th class="datatable-nosort">Hành động</th>
                                                                 </tr>
@@ -171,16 +175,24 @@
                                                         <ItemTemplate>
                                                             <tr>
                                                                 <td class="table-plus"> <%# Eval("name") %> </td>
+
                                                                 <td> 
                                                                     <img alt="" width="40" src="<%#Utils.LayURLHinhAnh(Eval("imageURL")) %>" />
                                                                 </td>
+                                                                <td> <%# Eval("gia") %> </td>
+                                                                <td>
+                                                                    <asp:Label ID="lblSoLuong" runat="server" Text='<%# Eval("soluong") %>'></asp:Label>
+                                                                </td>
+                                                                <td> <%# Eval("tensp") %> </td>
                                                                 <td>
                                                                     <asp:Label ID="lblIsActive" runat="server" Text='<%# Eval("isActive") %>'></asp:Label>
                                                                 </td>
+                                                                <td> <%# Eval("mota") %> </td>
                                                                 <td> <%# Eval("ngaytao") %> </td>
+
                                                                 <td>
-                                                                    <asp:LinkButton ID="LinkButtonEdit" runat="server" CssClass="badge badge-primary" CommandArgument='<%# Eval("categoryID") %>' CommandName="edit" Text="Sửa"> <i class="ti-pencil"></i> </asp:LinkButton> 
-                                                                    <asp:LinkButton ID="LinkButtonDelete" runat="server" CssClass="badge bg-danger" CommandArgument='<%# Eval("categoryID") %>' CommandName="delete" Text="Xóa" OnClientClick="return confirm('Bạn có chắc chắn muốn xóa?');"><i class="ti-trash"></i></asp:LinkButton>
+                                                                    <asp:LinkButton ID="LinkButtonEdit" runat="server" CssClass="badge badge-primary" CausesValidation="false" CommandArgument='<%# Eval("productID") %>' CommandName="edit" Text="Sửa"> <i class="ti-pencil"></i> </asp:LinkButton> 
+                                                                    <asp:LinkButton ID="LinkButtonDelete" runat="server" CssClass="badge bg-danger" CausesValidation="false" CommandArgument='<%# Eval("productID") %>' CommandName="delete" Text="Xóa" OnClientClick="return confirm('Bạn có chắc chắn muốn xóa?');"><i class="ti-trash"></i></asp:LinkButton>
                                                                 </td>
                                                             </tr>
                                                         </ItemTemplate>
