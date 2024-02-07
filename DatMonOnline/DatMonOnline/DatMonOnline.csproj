@@ -67,6 +67,7 @@
   <ItemGroup>
     <Content Include="Admin\Category.aspx" />
     <Content Include="Admin\GiaoDienChinh.aspx" />
+    <Content Include="Admin\SanPham.aspx" />
     <Content Include="assets\css\animate.css\css\animate.css" />
     <Content Include="assets\css\bootstrap\css\bootstrap.min.css" />
     <Content Include="assets\css\jquery.mCustomScrollbar.css" />
@@ -229,6 +230,13 @@
     </Compile>
     <Compile Include="Admin\GiaoDienChinh.aspx.designer.cs">
       <DependentUpon>GiaoDienChinh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SanPham.aspx.cs">
+      <DependentUpon>SanPham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SanPham.aspx.designer.cs">
+      <DependentUpon>SanPham.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
