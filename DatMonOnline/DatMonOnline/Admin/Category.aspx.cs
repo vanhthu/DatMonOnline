@@ -119,7 +119,8 @@ namespace DatMonOnline.Admin
             // thêm dữ liệu bằng repeater
             repeatCategory.DataSource = dt;
             repeatCategory.DataBind();
-
+            //imgCategory.Visible = false;
+            imgCategory.ImageUrl = String.Empty;
 
         }
 
