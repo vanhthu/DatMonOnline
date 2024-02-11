@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="SanPham.aspx.cs" Inherits="DatMonOnline.Admin.SanPham" %>
+
 <%@ Import Namespace="DatMonOnline" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -26,8 +27,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="pcoded-inner-content pt-0">
-
+    <div class="pcoded-inner-content pt-0">
         <div class="align-align-self-end">
             <asp:Label ID="lbMessage" runat="server" Visible="false"></asp:Label>
         </div>
@@ -51,10 +51,10 @@
                                                     <div>
                                                         <asp:TextBox ID="txtName" runat="server" CssClass="form-control"
                                                             placeholder="Nhập vào tên món ăn..."></asp:TextBox>
-                                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
-                                                            ErrorMessage="Vui lòng nhập tên!" ForeColor="Red" 
+                                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+                                                            ErrorMessage="Vui lòng nhập tên!" ForeColor="Red"
                                                             Display="Dynamic" SetFocusOnError="true"
-                                                            ControlToValidate="txtName" ></asp:RequiredFieldValidator>
+                                                            ControlToValidate="txtName"></asp:RequiredFieldValidator>
                                                         <asp:HiddenField ID="hdnId" runat="server" Value="0" />
 
                                                     </div>
@@ -64,10 +64,10 @@
                                                     <div>
                                                         <asp:TextBox ID="txtThongTinSP" runat="server" CssClass="form-control"
                                                             placeholder="Nhập vào thông tin món ăn..." TextMode="MultiLine"></asp:TextBox>
-                                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-                                                            ErrorMessage="Vui lòng nhập vào thông tin!" ForeColor="Red" 
+                                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
+                                                            ErrorMessage="Vui lòng nhập vào thông tin!" ForeColor="Red"
                                                             Display="Dynamic" SetFocusOnError="true"
-                                                            ControlToValidate="txtThongTinSP" >
+                                                            ControlToValidate="txtThongTinSP">
                                                         </asp:RequiredFieldValidator>
                                                     </div>
                                                 </div>
@@ -76,14 +76,14 @@
                                                     <div>
                                                         <asp:TextBox ID="txtGia" runat="server" CssClass="form-control"
                                                             placeholder="Nhập vào giá sản phẩm..."></asp:TextBox>
-                                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
-                                                            ErrorMessage="Vui lòng nhập vào thông tin!" ForeColor="Red" 
-                                                            Display="Dynamic" SetFocusOnError="true" ControlToValidate="txtGia" >
+                                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
+                                                            ErrorMessage="Vui lòng nhập vào thông tin!" ForeColor="Red"
+                                                            Display="Dynamic" SetFocusOnError="true" ControlToValidate="txtGia">
                                                         </asp:RequiredFieldValidator>
-                                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
-                                                            ErrorMessage="Giá phải là số thực!" ForeColor="Red" 
-                                                            Display="Dynamic" SetFocusOnError="true" ControlToValidate="txtGia" 
-                                                            ValidationExpression="^\d{0,8}(\.\d{1,4})?$" ></asp:RegularExpressionValidator>
+                                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server"
+                                                            ErrorMessage="Giá phải là số thực!" ForeColor="Red"
+                                                            Display="Dynamic" SetFocusOnError="true" ControlToValidate="txtGia"
+                                                            ValidationExpression="^\d{0,8}(\.\d{1,4})?$"></asp:RegularExpressionValidator>
                                                     </div>
                                                 </div>
 
@@ -92,14 +92,14 @@
                                                     <div>
                                                         <asp:TextBox ID="txtSoLuong" runat="server" CssClass="form-control"
                                                             placeholder="Nhập vào số lượng..."></asp:TextBox>
-                                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
-                                                            ErrorMessage="Vui lòng nhập vào thông tin!" ForeColor="Red" 
-                                                            Display="Dynamic" SetFocusOnError="true" ControlToValidate="txtSoLuong" >
+                                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
+                                                            ErrorMessage="Vui lòng nhập vào thông tin!" ForeColor="Red"
+                                                            Display="Dynamic" SetFocusOnError="true" ControlToValidate="txtSoLuong">
                                                         </asp:RequiredFieldValidator>
-                                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" 
-                                                            ErrorMessage="Số lượng phải là số dương!" ForeColor="Red" 
-                                                            Display="Dynamic" SetFocusOnError="true" ControlToValidate="txtSoLuong" 
-                                                            ValidationExpression="^([1-9]\d*|0)$" ></asp:RegularExpressionValidator>
+                                                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server"
+                                                            ErrorMessage="Số lượng phải là số dương!" ForeColor="Red"
+                                                            Display="Dynamic" SetFocusOnError="true" ControlToValidate="txtSoLuong"
+                                                            ValidationExpression="^([1-9]\d*|0)$"></asp:RegularExpressionValidator>
                                                     </div>
                                                 </div>
 
@@ -113,16 +113,16 @@
 
                                                 <div class="form-group">
                                                     <label>Danh mục sản phẩm</label>
-                                                    <div>                                                        
-                                                        <asp:DropDownList ID="ddlDanhMuc" runat="server" CssClass="form-control" 
+                                                    <div>
+                                                        <asp:DropDownList ID="ddlDanhMuc" runat="server" CssClass="form-control"
                                                             DataSourceID="SqlDataSource1" DataTextField="name" DataValueField="categoryID"
-                                                            AppendDataBoundItems="true" >
+                                                            AppendDataBoundItems="true">
                                                             <asp:ListItem Value="0">Lựa chọn danh mục</asp:ListItem>
                                                         </asp:DropDownList>
-                                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
-                                                            ErrorMessage="Vui lòng nhập vào thông tin!" ForeColor="Red" 
+                                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server"
+                                                            ErrorMessage="Vui lòng nhập vào thông tin!" ForeColor="Red"
                                                             Display="Dynamic" SetFocusOnError="true"
-                                                            ControlToValidate="ddlDanhMuc" InitialValue="0" >
+                                                            ControlToValidate="ddlDanhMuc" InitialValue="0">
                                                         </asp:RequiredFieldValidator>
                                                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs %>" SelectCommand="SELECT [categoryID], [name] FROM [PHANLOAI]"></asp:SqlDataSource>
                                                     </div>
@@ -136,8 +136,8 @@
 
                                                 <div class="pb-5">
                                                     <asp:Button ID="btnAdd0rUpdate" runat="server" Text="Thêm" CssClass="btn btn-primary"
-                                                        OnClick="btnAdd0rUpdate_Click"/>
-                                                    
+                                                        OnClick="btnAdd0rUpdate_Click" />
+
                                                     &nbsp;
                                                     <asp:Button ID="btnClear" runat="server" Text="Xóa" CssClass="btn btn-primary"
                                                         CausesValidation="false" OnClick="btnClear_Click" />
@@ -157,41 +157,41 @@
                                                             <table class="table data-table-export table-hover nowrap">
                                                                 <thead>
                                                                     <tr>
-                                                                    <th class="table-plus">Tên</th>
-                                                                    <th>Hình ảnh</th>
-                                                                    <th>Giá</th>
-                                                                    <th>Số lượng</th>
-                                                                    <th>Danh mục</th>
-                                                                    <th>IsActive</th>
-                                                                    <th>Mô tả</th>
-                                                                    <th>Ngày tạo</th>
-                                                                    <th class="datatable-nosort">Hành động</th>
-                                                                </tr>
+                                                                        <th class="table-plus">Tên</th>
+                                                                        <th>Hình ảnh</th>
+                                                                        <th>Giá</th>
+                                                                        <th>Số lượng</th>
+                                                                        <th>Danh mục</th>
+                                                                        <th>IsActive</th>
+                                                                        <th>Mô tả</th>
+                                                                        <th>Ngày tạo</th>
+                                                                        <th class="datatable-nosort">Hành động</th>
+                                                                    </tr>
                                                                 </thead>
-                                                                
-                                                                    <tbody> 
-                                                        </HeaderTemplate> 
+
+                                                                <tbody>
+                                                        </HeaderTemplate>
 
                                                         <ItemTemplate>
                                                             <tr>
-                                                                <td class="table-plus"> <%# Eval("name") %> </td>
+                                                                <td class="table-plus"><%# Eval("name") %> </td>
 
-                                                                <td> 
+                                                                <td>
                                                                     <img alt="" width="40" src="<%#Utils.LayURLHinhAnh(Eval("imageURL")) %>" />
                                                                 </td>
-                                                                <td> <%# Eval("gia") %> </td>
+                                                                <td><%# Eval("gia") %> </td>
                                                                 <td>
                                                                     <asp:Label ID="lblSoLuong" runat="server" Text='<%# Eval("soluong") %>'></asp:Label>
                                                                 </td>
-                                                                <td> <%# Eval("tensp") %> </td>
+                                                                <td><%# Eval("tensp") %> </td>
                                                                 <td>
                                                                     <asp:Label ID="lblIsActive" runat="server" Text='<%# Eval("isActive") %>'></asp:Label>
                                                                 </td>
-                                                                <td> <%# Eval("mota") %> </td>
-                                                                <td> <%# Eval("ngaytao") %> </td>
+                                                                <td><%# Eval("mota") %> </td>
+                                                                <td><%# Eval("ngaytao") %> </td>
 
                                                                 <td>
-                                                                    <asp:LinkButton ID="LinkButtonEdit" runat="server" CssClass="badge badge-primary" CausesValidation="false" CommandArgument='<%# Eval("productID") %>' CommandName="edit" Text="Sửa"> <i class="ti-pencil"></i> </asp:LinkButton> 
+                                                                    <asp:LinkButton ID="LinkButtonEdit" runat="server" CssClass="badge badge-primary" CausesValidation="false" CommandArgument='<%# Eval("productID") %>' CommandName="edit" Text="Sửa"> <i class="ti-pencil"></i> </asp:LinkButton>
                                                                     <asp:LinkButton ID="LinkButtonDelete" runat="server" CssClass="badge bg-danger" CausesValidation="false" CommandArgument='<%# Eval("productID") %>' CommandName="delete" Text="Xóa" OnClientClick="return confirm('Bạn có chắc chắn muốn xóa?');"><i class="ti-trash"></i></asp:LinkButton>
                                                                 </td>
                                                             </tr>
