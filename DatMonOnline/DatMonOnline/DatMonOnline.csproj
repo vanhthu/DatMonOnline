@@ -181,6 +181,7 @@
     <Content Include="Global.asax" />
     <Content Include="NguoiDung\About.aspx" />
     <Content Include="NguoiDung\Contact.aspx" />
+    <Content Include="NguoiDung\DangKy.aspx" />
     <Content Include="NguoiDung\Menu.aspx" />
     <Content Include="NguoiDung\SliderUserControl.ascx" />
     <Content Include="NguoiDung\TrangChu.aspx" />
@@ -255,6 +256,13 @@
     </Compile>
     <Compile Include="NguoiDung\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NguoiDung\DangKy.aspx.cs">
+      <DependentUpon>DangKy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NguoiDung\DangKy.aspx.designer.cs">
+      <DependentUpon>DangKy.aspx</DependentUpon>
     </Compile>
     <Compile Include="NguoiDung\Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
