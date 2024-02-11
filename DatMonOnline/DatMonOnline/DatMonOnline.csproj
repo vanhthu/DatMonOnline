@@ -323,6 +323,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\Category\" />
+    <Folder Include="Images\NguoiDung\" />
     <Folder Include="Images\SanPham\" />
     <Folder Include="Models\" />
   </ItemGroup>

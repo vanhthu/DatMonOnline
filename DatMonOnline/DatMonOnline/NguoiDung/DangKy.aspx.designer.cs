@@ -33,15 +33,6 @@ namespace DatMonOnline.NguoiDung
         protected global::System.Web.UI.WebControls.Label lblHeaderMessage;
 
         /// <summary>
-        /// txtName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
-
-        /// <summary>
         /// rfvName control.
         /// </summary>
         /// <remarks>
@@ -60,13 +51,13 @@ namespace DatMonOnline.NguoiDung
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revName;
 
         /// <summary>
-        /// txtUserName control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUserName;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
         /// rfvUserName control.
@@ -78,13 +69,13 @@ namespace DatMonOnline.NguoiDung
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvUserName;
 
         /// <summary>
-        /// txtEmail control.
+        /// txtUserName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        protected global::System.Web.UI.WebControls.TextBox txtUserName;
 
         /// <summary>
         /// rfvEmail control.
@@ -96,13 +87,13 @@ namespace DatMonOnline.NguoiDung
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmail;
 
         /// <summary>
-        /// txtSoDT control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSoDT;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
         /// rfvSoDT control.
@@ -123,13 +114,13 @@ namespace DatMonOnline.NguoiDung
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revSoDT;
 
         /// <summary>
-        /// txtDiaChi control.
+        /// txtSoDT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDiaChi;
+        protected global::System.Web.UI.WebControls.TextBox txtSoDT;
 
         /// <summary>
         /// rfvDiaChi control.
@@ -141,13 +132,13 @@ namespace DatMonOnline.NguoiDung
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDiaChi;
 
         /// <summary>
-        /// txtMaXacNhan control.
+        /// txtDiaChi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaXacNhan;
+        protected global::System.Web.UI.WebControls.TextBox txtDiaChi;
 
         /// <summary>
         /// rfvMaXacNhan control.
@@ -168,6 +159,15 @@ namespace DatMonOnline.NguoiDung
         protected global::System.Web.UI.WebControls.RegularExpressionValidator revMaXacNhan;
 
         /// <summary>
+        /// txtMaXacNhan control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMaXacNhan;
+
+        /// <summary>
         /// fuUserImage control.
         /// </summary>
         /// <remarks>
@@ -177,15 +177,6 @@ namespace DatMonOnline.NguoiDung
         protected global::System.Web.UI.WebControls.FileUpload fuUserImage;
 
         /// <summary>
-        /// txtMatKhau control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMatKhau;
-
-        /// <summary>
         /// rfvMatKhau control.
         /// </summary>
         /// <remarks>
@@ -193,6 +184,15 @@ namespace DatMonOnline.NguoiDung
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMatKhau;
+
+        /// <summary>
+        /// txtMatKhau control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMatKhau;
 
         /// <summary>
         /// btnDangKy control.
