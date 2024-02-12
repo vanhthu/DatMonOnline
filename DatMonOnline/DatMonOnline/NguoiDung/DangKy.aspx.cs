@@ -9,6 +9,7 @@ using System.Data;
 using System.Security.AccessControl;
 using Microsoft.SqlServer.Server;
 using System.IO;
+using System.Net.Cache;
 
 namespace DatMonOnline.NguoiDung
 {
@@ -20,7 +21,17 @@ namespace DatMonOnline.NguoiDung
         DataTable dt;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (Request.QueryString["id"] != null)
+                {
+                    LayThongTinNguoiDung();
+                }
+                else if (Session["userID"] != null)
+                {
+                    Response.Redirect("TrangChu.aspx");
+                }
+            }
         }
 
         protected void btnDangKy_Click(object sender, EventArgs e)
@@ -28,20 +39,23 @@ namespace DatMonOnline.NguoiDung
             string actionName = string.Empty;
             string imagePath = string.Empty;
             string fileExtension = string.Empty;
+
             bool isValidToExcute = false;
+
             int userID = Convert.ToInt32(Request.QueryString["id"]);
+
             cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
             cmd = new SqlCommand("NGUOIDUNG_CRUD", cn);
 
             cmd.Parameters.AddWithValue("@action", userID == 0 ? "INSERT" : "UPDATE");
             cmd.Parameters.AddWithValue("@userID", userID);
-            cmd.Parameters.AddWithValue("@name", txtName.ToString().Trim());
-            cmd.Parameters.AddWithValue("@userName", txtUserName.ToString().Trim());
-            cmd.Parameters.AddWithValue("@sodt", txtSoDT.ToString().Trim());
-            cmd.Parameters.AddWithValue("@email", txtEmail.ToString().Trim());
-            cmd.Parameters.AddWithValue("@diaChi", txtDiaChi.ToString().Trim());
-            cmd.Parameters.AddWithValue("@maXacNhan", txtMaXacNhan.ToString().Trim());
-            cmd.Parameters.AddWithValue("@matKhau", txtMatKhau.ToString().Trim());
+            cmd.Parameters.AddWithValue("@name", txtName.Text.Trim());
+            cmd.Parameters.AddWithValue("@userName", txtUserName.Text.Trim());
+            cmd.Parameters.AddWithValue("@sdt", txtSoDT.Text.Trim());
+            cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
+            cmd.Parameters.AddWithValue("@diachi", txtDiaChi.Text.Trim());
+            cmd.Parameters.AddWithValue("@postCode", txtMaXacNhan.Text.Trim());
+            cmd.Parameters.AddWithValue("@matKhau", txtMatKhau.Text.Trim());
 
             if (fuUserImage.HasFile)
             {
@@ -57,9 +71,9 @@ namespace DatMonOnline.NguoiDung
                 else
                 {
                     lblMessage.Visible = true;
-                    lblMessage.Text = "Vui lòng chọn .png .jpeg .jpg ";
+                    lblMessage.Text = "Vui lòng chọn hình .jpg, .jpeg hoặc .png";
                     lblMessage.CssClass = "alert alert-danger";
-                    isValidToExcute = false; 
+                    isValidToExcute = false;
                 }
             }
             else
@@ -74,10 +88,10 @@ namespace DatMonOnline.NguoiDung
                 {
                     cn.Open();
                     cmd.ExecuteNonQuery();
-                    actionName = userID == 0 ? "Đăng ký thành công! <b><a href='DangNhap.aspx'>Nhấn vào đây</a></b> để đăng nhập" :
+                    actionName = userID == 0 ? " Đăng ký thành công! <b><a href='DangNhap.aspx'>Nhấn vào đây</a></b> để đăng nhập" :
                         "Thông tin được cập nhật thành công! <b><a href='ThongTin.aspx'>Nhấn vào đây</a></b> ";
                     lblMessage.Visible = true;
-                    lblMessage.Text = "<b>" + txtUserName.ToString().Trim() +"<b>" + actionName;
+                    lblMessage.Text = "<b>" + txtUserName.Text.Trim() +"<b>" + actionName;
                     lblMessage.CssClass = "alert alert-success";
                     if(userID != 0)
                     {
@@ -90,15 +104,15 @@ namespace DatMonOnline.NguoiDung
                 {
                     if(ex.Message.Contains("Violation of UNIQUE KEY constraint"))
                     {
-                        lblMessage.Visible = false;
-                        lblMessage.Text = "<b>" + txtUserName.ToString().Trim() + "<b>" + "tên đã tồn tại. Vui lòng nhập tên khác!";
+                        lblMessage.Visible = true;
+                        lblMessage.Text = "<b>" + txtUserName.Text.Trim() + "<b>" + "tên đã tồn tại. Vui lòng nhập tên khác!";
                         lblMessage.CssClass = "alert alert-danger";
                     }                    
                 }
                 catch(Exception ex)
                 {
                     lblMessage.Visible = true;
-                    lblMessage.Text = "Lỗi: " +ex.Message;
+                    lblMessage.Text = "Không thành công " + ex.Message;
                     lblMessage.CssClass = "alert alert-danger";
                 }
                 finally
@@ -108,6 +122,43 @@ namespace DatMonOnline.NguoiDung
 
             }
 
+        }
+
+        // int userID = Convert.ToInt32(Request.QueryString["id"]); có thể truy cập thông tin người dùng thông qua ID
+        private void LayThongTinNguoiDung()
+        {
+            cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
+            cmd = new SqlCommand("NGUOIDUNG_CRUD", cn);
+            cmd.Parameters.AddWithValue("@action", "SELECTFORINFO");
+            cmd.Parameters.AddWithValue("@userID", Request.QueryString["id"]);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            da = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+            da.Fill(dt);
+
+            if(dt.Rows.Count == 1)
+            {
+                txtName.Text = dt.Rows[0]["name"].ToString();
+                txtUserName.Text = dt.Rows[0]["userName"].ToString();
+                txtSoDT.Text = dt.Rows[0]["soDT"].ToString();
+                txtEmail.Text = dt.Rows[0]["email"].ToString();
+                txtDiaChi.Text = dt.Rows[0]["diachi"].ToString();
+                txtMaXacNhan.Text = dt.Rows[0]["maXacNhan"].ToString();
+                imgUser.ImageUrl = String.IsNullOrEmpty(dt.Rows[0]["imageURL"].ToString()) ?
+                    "../Images/No_image.png" :
+                    "../" + dt.Rows[0]["imageURL"].ToString();
+
+                imgUser.Width = 200;
+                imgUser.Height = 200;
+                txtMatKhau.TextMode = TextBoxMode.SingleLine;
+                txtMatKhau.ReadOnly = true;
+                txtMatKhau.Text = dt.Rows[0]["matKhau"].ToString();
+
+            }
+            lblHeaderMessage.Text = "<h2>Cập nhật thông tin</h2>";
+            btnDangKy.Text = "Cập nhật";
+            lblDaDK.Text = "";
         }
         private void clear()
         {

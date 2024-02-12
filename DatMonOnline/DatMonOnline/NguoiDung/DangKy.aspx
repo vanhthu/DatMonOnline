@@ -66,10 +66,10 @@
                         <div>
                             <asp:RequiredFieldValidator ID="rfvSoDT" runat="server" ErrorMessage="Vui lòng nhập vào số điện thoại!" ControlToValidate="txtSoDT"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="revSoDT" runat="server" ErrorMessage="Không đúng định dạng!" ControlToValidate="txtSoDT"
+                            <asp:RegularExpressionValidator ID="revSoDT" runat="server" ErrorMessage="Số điện thoại phải có 10 chữ số!" ControlToValidate="txtSoDT"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true" ValidationExpression="^[0-9]{10}$"></asp:RegularExpressionValidator>
                             <asp:TextBox ID="txtSoDT" runat="server" CssClass="form-control" placeholder="Nhập vào số điện thoại"
-                                ToolTip="Số điện thoại" TextMode="Number"></asp:TextBox>
+                                ToolTip="Số điện thoại"></asp:TextBox>
 
                         </div>
 
@@ -97,7 +97,7 @@
 
                         </div>
                         <div>
-                            <asp:FileUpload ID="fuUserImage" runat="server" CssClass="form-control" ToolTip="Ảnh người dùng" onchange="ImagePreview(this)" />
+                            <asp:FileUpload ID="fuUserImage" runat="server" CssClass="form-control" ToolTip="Ảnh người dùng" onchange="ImagePreview(this);" />
 
                         </div>
                         <div>
@@ -115,7 +115,7 @@
                     <div class="btn_box">
                         <asp:Button ID="btnDangKy" runat="server" Text="Đăng ký" CssClass="btn btn-success rounded-pill pl-4 pr-4 text-white" 
                             OnClick="btnDangKy_Click"/>
-                        <asp:Label ID="lblDaDK" runat="server" CssClass="pl-3 text-black-100" Text="<a href='DangNhap.aspx' CssClass='badge badge-info'>Đăng nhập ngay!</a>"></asp:Label>
+                        <asp:Label ID="lblDaDK" runat="server" CssClass="pl-3 text-black-100" Text="Đã có tài khoản? <a href='DangNhap.aspx' class='badge badge-info'>Đăng nhập ngay!</a>"></asp:Label>
                     </div>
                 </div>
 
