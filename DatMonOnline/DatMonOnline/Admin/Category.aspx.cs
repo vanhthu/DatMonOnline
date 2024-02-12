@@ -120,7 +120,7 @@ namespace DatMonOnline.Admin
             repeatCategory.DataSource = dt;
             repeatCategory.DataBind();
             //imgCategory.Visible = false;
-            imgCategory.ImageUrl = String.Empty;
+            //imgCategory.ImageUrl = String.Empty;
 
         }
 

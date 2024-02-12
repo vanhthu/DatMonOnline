@@ -141,10 +141,10 @@ namespace DatMonOnline.NguoiDung
             {
                 txtName.Text = dt.Rows[0]["name"].ToString();
                 txtUserName.Text = dt.Rows[0]["userName"].ToString();
-                txtSoDT.Text = dt.Rows[0]["soDT"].ToString();
+                txtSoDT.Text = dt.Rows[0]["sdt"].ToString();
                 txtEmail.Text = dt.Rows[0]["email"].ToString();
                 txtDiaChi.Text = dt.Rows[0]["diachi"].ToString();
-                txtMaXacNhan.Text = dt.Rows[0]["maXacNhan"].ToString();
+                txtMaXacNhan.Text = dt.Rows[0]["postCode"].ToString();
                 imgUser.ImageUrl = String.IsNullOrEmpty(dt.Rows[0]["imageURL"].ToString()) ?
                     "../Images/No_image.png" :
                     "../" + dt.Rows[0]["imageURL"].ToString();
