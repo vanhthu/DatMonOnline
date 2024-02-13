@@ -16,7 +16,7 @@ namespace DatMonOnline.Admin
                 Session["breadcrum"] = "";
                 if (Session["admin"] == null)
                 {
-                    Response.Redirect("../User/DangNhap.aspx");
+                    Response.Redirect("../NguoiDung/DangNhap.aspx");
                 }
             }
         }

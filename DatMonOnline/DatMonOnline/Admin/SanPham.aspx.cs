@@ -23,7 +23,7 @@ namespace DatMonOnline.Admin
                 Session["breadCrum"] = "Sản phẩm";
                 if (Session["admin"] == null)
                 {
-                    Response.Redirect("../User/DangNhap.aspx");
+                    Response.Redirect("../NguoiDung/DangNhap.aspx");
                 }
                 else
                 {
