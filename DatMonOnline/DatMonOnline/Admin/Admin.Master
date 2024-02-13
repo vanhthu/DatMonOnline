@@ -126,6 +126,8 @@
                                     </a>
                                 </li>
                             </ul>
+
+                            <%-- thông tin phía admin --%>
                             <ul class="nav-right">
                                 <li class="user-profile header-notification">
                                     <a href="#!">
@@ -135,13 +137,18 @@
                                     </a>
                                     <ul class="show-notification profile-notification">
                                         <li>
-                                            <a href="auth-normal-sign-in.html">
+                                            <%--<a href="auth-normal-sign-in.html">
                                                 <i class="ti-layout-sidebar-left"></i>Logout
-                                            </a>
+                                            </a>--%>
+
+                                            <asp:LinkButton ID="lbDangXuat" runat="server" CausesValidation="false" OnClick="lbDangXuat_Click">
+                                                <i class="ti-layout-sidebar-left"></i>Đăng xuất
+                                            </asp:LinkButton>
                                         </li>
                                     </ul>
                                 </li>
                             </ul>
+
                         </div>
                     </div>
                 </nav>

@@ -13,5 +13,11 @@ namespace DatMonOnline.Admin
         {
 
         }
+
+        protected void lbDangXuat_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("../NguoiDung/DangNhap.aspx");
+        }
     }
 }
