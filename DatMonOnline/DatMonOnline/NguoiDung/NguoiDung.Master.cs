@@ -25,6 +25,28 @@ namespace DatMonOnline.NguoiDung
                 panelSlider.Controls.Add(sliderUserControl);
             }
 
+            if (Session["userID"] != null)
+            {
+                lbDangNhapDangXuat.Text = "Đăng xuất";
+            }
+            else
+            {
+                lbDangNhapDangXuat.Text = "Đăng nhập";
+            }
+
+        }
+
+        protected void lbDangNhapDangXuat_Click(object sender, EventArgs e)
+        {
+            if (Session["userID"] == null)
+            {
+                Response.Redirect("DangNhap.aspx");
+            }
+            else
+            {
+                Session.Abandon();
+                Response.Redirect("DangNhap.aspx");
+            }
         }
     }
 }

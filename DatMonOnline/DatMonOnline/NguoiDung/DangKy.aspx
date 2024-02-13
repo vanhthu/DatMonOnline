@@ -28,7 +28,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section class="book_section layout_padding">
         <div class="container">
-            <div class="heading-container">
+            <div class="heading_container">
                 <div class="align-self-end">
                     <asp:Label ID="lblMessage" runat="server" Visible="false"></asp:Label>
                 </div>

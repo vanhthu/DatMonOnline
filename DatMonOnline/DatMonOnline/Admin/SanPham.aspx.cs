@@ -21,7 +21,14 @@ namespace DatMonOnline.Admin
             if (!IsPostBack)
             {
                 Session["breadCrum"] = "Sản phẩm";
-                LayDuLieu();
+                if (Session["admin"] == null)
+                {
+                    Response.Redirect("../User/DangNhap.aspx");
+                }
+                else
+                {
+                    LayDuLieu();
+                }
             }
             lbMessage.Visible = false;
         }

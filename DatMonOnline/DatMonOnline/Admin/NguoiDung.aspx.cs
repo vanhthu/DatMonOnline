@@ -20,7 +20,15 @@ namespace DatMonOnline.Admin
             if (!IsPostBack)
             {
                 Session["breadCrum"] = "Người dùng";
-                LayDuLieu();
+                // admin phải đăng nhập thì mới vào trang admin được
+                if (Session["admin"] == null)
+                {
+                    Response.Redirect("../NguoiDung/DangNhap.aspx");
+                }
+                else
+                {
+                    LayDuLieu();
+                }
             }
             //lbMessage.Visible = false;
         }
