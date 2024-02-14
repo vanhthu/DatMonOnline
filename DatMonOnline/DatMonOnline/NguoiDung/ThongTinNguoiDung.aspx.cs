@@ -42,6 +42,9 @@ namespace DatMonOnline.NguoiDung
             dt = new DataTable();
             da.Fill(dt);
 
+            repeatThongTinNguoiDung.DataSource = dt;
+            repeatThongTinNguoiDung.DataBind();
+
             if (dt.Rows.Count == 1)
             {
                 Session["name"] = dt.Rows[0]["name"].ToString();
