@@ -89,7 +89,7 @@
                                                             <label style="font-weight:bold">Tên đầy đủ</label>
                                                         </div>
                                                         <div class="col-md-8 col-6">
-                                                            <%# Eval("name"); %>
+                                                            <%# Eval("name") %>
                                                         </div>
                                                     </div>
                                                     <hr />
@@ -99,7 +99,7 @@
                                                             <label style="font-weight:bold">Tên người dùng</label>
                                                         </div>
                                                         <div class="col-md-8 col-6">
-                                                            <%# Eval("userName"); %>
+                                                            <%# Eval("userName") %>
                                                         </div>
                                                     </div>
                                                     <hr />
@@ -109,7 +109,7 @@
                                                             <label style="font-weight:bold">Số điện thoại</label>
                                                         </div>
                                                         <div class="col-md-8 col-6">
-                                                            <%# Eval("sdt"); %>
+                                                            <%# Eval("sdt") %>
                                                         </div>
                                                     </div>
                                                     <hr />
@@ -119,7 +119,7 @@
                                                             <label style="font-weight:bold">Email</label>
                                                         </div>
                                                         <div class="col-md-8 col-6">
-                                                            <%# Eval("email"); %>
+                                                            <%# Eval("email") %>
                                                         </div>
                                                     </div>
                                                     <hr />
@@ -129,7 +129,7 @@
                                                             <label style="font-weight:bold">Mã bưu chính</label>
                                                         </div>
                                                         <div class="col-md-8 col-6">
-                                                            <%# Eval("postCode"); %>
+                                                            <%# Eval("postCode") %>
                                                         </div>
                                                     </div>
                                                     <hr />
@@ -139,7 +139,7 @@
                                                             <label style="font-weight:bold">Địa chỉ</label>
                                                         </div>
                                                         <div class="col-md-8 col-6">
-                                                            <%# Eval("diachi"); %>
+                                                            <%# Eval("diachi") %>
                                                         </div>
                                                     </div>
                                                     <hr />

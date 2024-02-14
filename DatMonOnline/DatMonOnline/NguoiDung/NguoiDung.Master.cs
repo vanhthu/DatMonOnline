@@ -48,5 +48,19 @@ namespace DatMonOnline.NguoiDung
                 Response.Redirect("DangNhap.aspx");
             }
         }
+
+        protected void lbDangKyorThongTin_Click(object sender, EventArgs e)
+        {
+            if (Session["userID"] != null)
+            {
+                lbDangKyorThongTin.ToolTip = "Thông tin người dùng";
+                Response.Redirect("ThongTinNguoiDung.aspx");
+            }
+            else
+            {
+                lbDangKyorThongTin.ToolTip = "Đăng ký";
+                Response.Redirect("DangKy.aspx");
+            }
+        }
     }
 }
