@@ -96,11 +96,12 @@ namespace DatMonOnline.NguoiDung
                     // thêm sản phẩm đã tồn tại vào giỏ hàng
                     Utils utils = new Utils();
                     isCartItemUpdated = utils.CapNhatSoLuongTrongGioHang(i + 1, Convert.ToInt32(e.CommandArgument), Convert.ToInt32(Session["userID"]));
-                    lblMessage.Visible = true;
-                    lblMessage.Text = "Đã thêm sản phẩm vào giỏ hàng";
-                    lblMessage.CssClass = "alert alert-success";
-                    Response.AddHeader("REFRESH", "1;URL=GioHang.aspx");
+                    
                 }
+                lblMessage.Visible = true;
+                lblMessage.Text = "Đã thêm sản phẩm vào giỏ hàng";
+                lblMessage.CssClass = "alert alert-success";
+                Response.AddHeader("REFRESH", "1;URL=GioHang.aspx");
             }
             else
             {
