@@ -36,6 +36,17 @@ body {
 .product__detail__option .qtybtn.inc{
     color: #111111;
 }
+.product__detail__option .qtybtn.inc{
+    border:none;
+    height:100%;
+    width:72px;
+    font-size:16px;
+    font-weight: 600;
+    color:#111111;
+    float:left;
+    text-align:center;
+}
+
 /* t?ng gi?m s? l??ng s?n ph?m*/
 .layout_padding {
   padding: 90px 0;
