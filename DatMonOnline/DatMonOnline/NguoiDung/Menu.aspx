@@ -22,7 +22,7 @@
       </ul>
 
       <div class="filters-content">
-        <div class="row grid">
+        <div class="row grid"> 
           <div class="col-sm-6 col-lg-4 all pizza">
             <div class="box">
               <div>

@@ -23,7 +23,7 @@
                                     <div class="image-container">
                                         <img src="<% Utils.LayURLHinhAnh(imageURL); %>" id="imgNguoiDung" style="width: 150px; height: 150px;"
                                             class="img-thumbnail" />
-
+                                         
                                         <div class="middle pt-2">
                                             <a href="DangKy.aspx?id=<%Response.Write(Session["userID"]); %>" class="btn btn-warning">
                                                 <i class="fa fa-pencil"></i>Chỉnh sửa
@@ -64,17 +64,17 @@
                                 </div>
                             </div>
 
+                            <%-- 2 cái tab --%>
                             <div class="row">
                                 <div class="col-12">
                                     <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
-                                        <li class="nav-item">
-                                            <%-- thông tin cơ bản  --%>
-                                            <a class="nav-link active text-info" id="basicInfor-tab" data-toggle="tab"
-                                                href="#ThongTinNguoiDung" aria-selected="true"><i class="fa fa-id-badge mr-2"></i>Thông tin người dùng</a>
+                                        <li class="nav-item">                                            
+                                            <a class="nav-link active text-info" id="basicInfor-tab" data-toggle="tab" role="tab"
+                                                href="#ThongTinNguoiDung" aria-selected="false"><i class="fa fa-id-badge mr-2"></i>Thông tin người dùng</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link text-info" id="connectedServices-tab" data-toggle="tab"
-                                                href="#KetNoi" aria-selected="false"><i class="fa fa-clock-o mr-2"></i>Lịch sử mua hàng</a>
+                                            <a class="nav-link text-info" id="lsmh-tab" data-toggle="tab" role="tab"
+                                                href="#LichSuMuaHang" aria-controls="lsmh" aria-selected="true"><i class="fa fa-clock-o mr-2"></i>Lịch sử mua hàng</a>
                                         </li>
                                     </ul>
 
@@ -150,7 +150,9 @@
 
 
                                         <%-- lịch sử mua hàng start --%>
-                                        <div class="tab-pane fade" id="connectedServices" role="tabpanel" aria-labelledby="connectedServices-tab"></div>
+                                        <div class="tab-pane fade" id="lsmh" role="tabpanel" aria-labelledby="lsmh-tab">
+                                            <h3>lịch sử mua hàng</h3>
+                                        </div> 
                                         <%-- lịch sử mua hàng end --%>
 
                                     </div>
