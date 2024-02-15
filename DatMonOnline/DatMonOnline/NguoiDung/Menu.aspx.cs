@@ -17,28 +17,32 @@ namespace DatMonOnline.NguoiDung
         DataTable dt;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                LayDuLieuDM();
+                LayDuLieuSP();
+            }
         }
         private void LayDuLieuDM()
         {
-            //cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
-            //cmd = new SqlCommand("CATEGORY_CRUD", cn);
-            //cmd.Parameters.AddWithValue("@action", "SELECT");
-            //cmd.CommandType = CommandType.StoredProcedure;
+            cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
+            cmd = new SqlCommand("CATEGORY_CRUD", cn);
+            cmd.Parameters.AddWithValue("@action", "ACTIVE");
+            cmd.CommandType = CommandType.StoredProcedure;
 
-            //da = new SqlDataAdapter(cmd);
-            //dt = new DataTable();
-            //da.Fill(dt);
-            
-            //repeatCategory.DataSource = dt;
-            //repeatCategory.DataBind();           
+            da = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+            da.Fill(dt);
+
+            repeatCategory.DataSource = dt;
+            repeatCategory.DataBind();
 
         }
         private void LayDuLieuSP()
         {
             cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
             cmd = new SqlCommand("SANPHAM_CRUD", cn);
-            cmd.Parameters.AddWithValue("@action", "SELECT");
+            cmd.Parameters.AddWithValue("@action", "ACTIVE");
             cmd.CommandType = CommandType.StoredProcedure;
 
             da = new SqlDataAdapter(cmd);
@@ -46,9 +50,12 @@ namespace DatMonOnline.NguoiDung
             da.Fill(dt);
             
             repeatSanPham.DataSource = dt;
-            repeatSanPham.DataBind();
-            //imgSanPham.ImageUrl = String.Empty;
+            repeatSanPham.DataBind();  
+        }
 
+        public string ChuyenDanhMucThanhChuThuong(object obj)
+        {
+            return obj.ToString().ToLower();
         }
 
     }
