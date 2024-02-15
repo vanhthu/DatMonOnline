@@ -19,6 +19,7 @@
                 <li class="active" data-filter="*">All</li>
                 <asp:Repeater ID="repeatCategory" runat="server">
                     <ItemTemplate>
+                        <%-- tương tác với store procedure --%>
                         <li data-filter=".<%# Eval("name").ToString().ToLower() %>"><%# Eval("name") %></li>
 
                     </ItemTemplate>
@@ -30,7 +31,7 @@
                 <div class="row grid">
                     <asp:Repeater ID="repeatSanPham" runat="server">
                         <ItemTemplate>
-                            <div class="col-sm-6 col-lg-4 all <%# Eval("name").ToString().ToLower() %>">
+                            <div class="col-sm-6 col-lg-4 all <%# Eval("tensp").ToString().ToLower() %>">
                                 <div class="box">
                                     <div>
                                         <div class="img-box">
