@@ -16,12 +16,13 @@
             </div>
 
             <ul class="filters_menu">
-                <li class="active" data-filter="*">All</li>
+                <li class="active" data-filter="*" data-id="0">All</li>
                 <asp:Repeater ID="repeatCategory" runat="server">
                     <ItemTemplate>
                         <%-- tương tác với store procedure, cắt khoảng trắng --%>
 
-                        <li data-filter=".<%# Regex.Replace(Eval("name").ToString().ToLower(), @"\s+", "") %>"><%# Eval("name") %></li>
+                        <li data-filter=".<%# Regex.Replace(Eval("name").ToString().ToLower(), @"\s+", "") %>"
+                            data-id="<%# Eval("categoryID") %>" ><%# Eval("name") %></li>
 
                     </ItemTemplate>
                 </asp:Repeater>
