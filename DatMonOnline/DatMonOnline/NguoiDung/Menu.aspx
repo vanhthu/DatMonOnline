@@ -31,7 +31,7 @@
 
             <div class="filters-content">
                 <div class="row grid">
-                    <asp:Repeater ID="repeatSanPham" runat="server">
+                    <asp:Repeater ID="repeatSanPham" runat="server" OnItemCommand="repeatSanPham_ItemCommand" >
                         <ItemTemplate>
                             <div class="col-sm-6 col-lg-4 all <%# Regex.Replace(Eval("tensp").ToString().ToLower(), @"\s+", "") %>">
                                 <div class="box">

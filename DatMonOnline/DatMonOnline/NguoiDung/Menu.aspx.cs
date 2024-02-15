@@ -58,5 +58,29 @@ namespace DatMonOnline.NguoiDung
             return obj.ToString().ToLower();
         }
 
+        protected void repeatSanPham_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (Session["userID"] != null)
+            {
+
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
+        }
+
+        int SanPhamTonTaiGioHang(int productID)
+        {
+            cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
+            cmd = new SqlCommand("GIOHANG_CRUD", cn);
+            cmd.Parameters.AddWithValue("@action", "GETBYID");            
+            cmd.CommandType = CommandType.StoredProcedure;
+            da = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+            da.Fill(dt);
+
+
+        }
     }
 }
