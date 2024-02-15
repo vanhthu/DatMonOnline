@@ -125,6 +125,7 @@ namespace DatMonOnline.Admin
             // thêm dữ liệu bằng repeater
             repeatSanPham.DataSource = dt;
             repeatSanPham.DataBind();
+            //có thể bỏ cái imgSanPham
             imgSanPham.ImageUrl = String.Empty;
 
         }
