@@ -62,7 +62,39 @@ namespace DatMonOnline.NguoiDung
         {
             if (Session["userID"] != null)
             {
+                bool isCartItemUodated = false;
+                int i = SanPhamTonTaiGioHang(Convert.ToInt32(e.CommandArgument));
 
+                if (i == 0)
+                {
+                    // thêm sản phẩm vào đây
+                    cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
+                    cmd = new SqlCommand("GIOHANG_CRUD", cn);
+                    cmd.Parameters.AddWithValue("@action", "INSERT");
+                    cmd.Parameters.AddWithValue("@productID", e.CommandArgument);
+                    cmd.Parameters.AddWithValue("@soluong", 1);
+                    cmd.Parameters.AddWithValue("@userID", Session["userID"]);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    try
+                    {
+                        cn.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch(Exception ex)
+                    {
+                        Response.Write("<script>alert('Lỗi - " + ex.Message + "')</script>");
+                    }
+                    finally
+                    {
+                        cn.Close();
+                    }
+
+                }
+                else
+                {
+                    //isCartItemUodated = true;
+                }
             }
             else
             {
@@ -75,12 +107,19 @@ namespace DatMonOnline.NguoiDung
             cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
             cmd = new SqlCommand("GIOHANG_CRUD", cn);
             cmd.Parameters.AddWithValue("@action", "GETBYID");            
+            cmd.Parameters.AddWithValue("@productID", productID);
+            cmd.Parameters.AddWithValue("@userID", Session["userID"]);
             cmd.CommandType = CommandType.StoredProcedure;
             da = new SqlDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);
 
-
+            int soLuong = 0;
+            if(dt.Rows.Count > 0)
+            {
+                soLuong = Convert.ToInt32(dt.Rows[0]["soluong"]);
+            }
+            return soLuong;
         }
     }
 }
