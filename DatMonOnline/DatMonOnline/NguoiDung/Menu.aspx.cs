@@ -104,7 +104,7 @@ namespace DatMonOnline.NguoiDung
             }
             else
             {
-                Response.Redirect("Login.aspx");
+                Response.Redirect("DangNhap.aspx");
             }
         }
 
