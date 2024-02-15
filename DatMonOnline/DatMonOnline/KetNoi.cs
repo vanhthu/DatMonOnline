@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace DatMonOnline
 {
@@ -17,6 +19,9 @@ namespace DatMonOnline
 
     public class Utils
     {
+        SqlConnection cn;        
+        SqlCommand cmd;
+
         public static bool IsValidExtention(string fileName)
         {
             bool isValid = false;
@@ -46,6 +51,36 @@ namespace DatMonOnline
                 url1 = string.Format("../{0}", url);
             }
             return url1;
+
+        }
+
+        public bool CapNhatSoLuongTrongGioHang(int soluong, int productID, int userID)
+        {
+            bool isUpdated = false;
+            cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
+            cmd = new SqlCommand("GIOHANG_CRUD", cn);
+            cmd.Parameters.AddWithValue("@action", "UPDATE");
+            cmd.Parameters.AddWithValue("@productID", productID);
+            cmd.Parameters.AddWithValue("@soluong", soluong);
+            cmd.Parameters.AddWithValue("@userID", userID);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            try
+            {
+                cn.Open();
+                cmd.ExecuteNonQuery();
+                isUpdated = true;
+            }
+            catch (Exception ex)
+            {
+                isUpdated = false;
+                System.Web.HttpContext.Current.Response.Write("<script> alert('Lỗi - " + ex.Message + "'); </script>");
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return isUpdated;
 
         }
     }

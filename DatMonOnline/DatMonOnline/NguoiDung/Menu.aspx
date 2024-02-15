@@ -11,6 +11,9 @@
     <section class="food_section layout_padding">
         <div class="container">
             <div class="heading_container heading_center">
+                <div class="align-self-end">
+                    <asp:Label ID="lblMessage" runat="server" Visible="false" ></asp:Label>
+                </div>
                 <h2>Our Menu
                 </h2>
             </div>
