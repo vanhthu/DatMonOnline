@@ -21,8 +21,7 @@
                                         </a>
                                     </div>
                                     <div class="detail-box">
-                                        <h5>Thứ Năm Tuyệt Vời
-                                        </h5>
+                                        <h5><%# Eval("name") %></h5>
                                         <h6>
                                             <span>20%</span> Giảm giá
                                         </h6>
