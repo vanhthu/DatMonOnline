@@ -34,7 +34,68 @@ namespace DatMonOnline.NguoiDung
 
         protected void repeatSanPhamGioHang_ItemCommand(object source, RepeaterCommandEventArgs e)
         {
+            Utils utils = new Utils();
+            if (e.CommandName == "xoa")
+            {
+                cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
+                cmd = new SqlCommand("GIOHANG_CRUD", cn);
+                cmd.Parameters.AddWithValue("@action", "DELETE");
+                cmd.Parameters.AddWithValue("@productID", e.CommandArgument);
+                cmd.Parameters.AddWithValue("@userID", Session["userID"]);
+                cmd.CommandType = CommandType.StoredProcedure;
 
+                try
+                {
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                    LaySanPhamTuGioHang();
+                    // đếm số lượng sản phẩm trong giỏ
+                    Session["demSoLuongGioHang"] = utils.demSoLuongGioHang(Convert.ToInt32(Session["userID"]));
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("<script> alert('Lỗi - " + ex.Message + "'); </script>");
+                }
+                finally
+                {
+                    cn.Close();
+                }
+                
+            }
+            if(e.CommandName== "capnhat")
+            {
+                bool isCartUpdated = false;
+                for(int i=0; i<repeatSanPhamGioHang.Items.Count; i++)
+                {
+                    if (repeatSanPhamGioHang.Items[i].ItemType == ListItemType.Item || repeatSanPhamGioHang.Items[i].ItemType == ListItemType.AlternatingItem)
+                    {
+                        TextBox soluong = repeatSanPhamGioHang.Items[i].FindControl("txtSoLuong") as TextBox;
+                        HiddenField _productID = repeatSanPhamGioHang.Items[i].FindControl("hdProductID") as HiddenField;
+                        HiddenField _SoLuong = repeatSanPhamGioHang.Items[i].FindControl("hdSoLuong") as HiddenField;
+                        int soluongGioHang = Convert.ToInt32(soluong.Text); // lấy từ textbox
+                        int productID = Convert.ToInt32(_productID.Value);
+                        int slTuDB = Convert.ToInt32(_SoLuong.Value);
+                        bool isTrue = false;
+                        int capNhatSoLuong = 1;
+                        if (soluongGioHang > slTuDB)
+                        {
+                            capNhatSoLuong = soluongGioHang;
+                            isTrue = true;
+                        }
+                        else if (soluongGioHang < slTuDB)
+                        {
+                            capNhatSoLuong = soluongGioHang;
+                            isTrue = true;
+                        }
+                        if (isTrue)
+                        {
+                            // cập nhật số lượng sản phẩm vào database
+                            isCartUpdated = utils.CapNhatSoLuongTrongGioHang(capNhatSoLuong, productID, Convert.ToInt32(Session["userID"]));
+                        }
+                    }
+                }
+                LaySanPhamTuGioHang();
+            }
         }
 
         protected void repeatSanPhamGioHang_ItemDataBound(object sender, RepeaterItemEventArgs e)

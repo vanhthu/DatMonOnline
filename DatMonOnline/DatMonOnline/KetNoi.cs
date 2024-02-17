@@ -21,6 +21,8 @@ namespace DatMonOnline
     {
         SqlConnection cn;        
         SqlCommand cmd;
+        SqlDataAdapter da;
+        DataTable dt;
 
         public static bool IsValidExtention(string fileName)
         {
@@ -83,7 +85,20 @@ namespace DatMonOnline
             return isUpdated;
 
         }
-    }
+        public int demSoLuongGioHang(int userID)
+        {
+            cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
+            cmd = new SqlCommand("GIOHANG_CRUD" , cn);
+            cmd.Parameters.AddWithValue("@action", "SELECT");
+            cmd.Parameters.AddWithValue("@userID", userID);
+            cmd.CommandType = CommandType.StoredProcedure;
 
+            da = new SqlDataAdapter(cmd);
+            dt = new DataTable();
+
+            da.Fill(dt);
+            return dt.Rows.Count;
+        }
+    }    
 
 }

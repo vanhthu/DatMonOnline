@@ -28,10 +28,13 @@ namespace DatMonOnline.NguoiDung
             if (Session["userID"] != null)
             {
                 lbDangNhapDangXuat.Text = "Đăng xuất";
+                Utils utils = new Utils();
+                Session["demSoLuongGioHang"] = utils.demSoLuongGioHang(Convert.ToInt32(Session["userID"])).ToString();
             }
             else
             {
                 lbDangNhapDangXuat.Text = "Đăng nhập";
+                Session["demSoLuongGioHang"] = "0";
             }
 
         }
