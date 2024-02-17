@@ -1,14 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NguoiDung/NguoiDung.Master" AutoEventWireup="true" CodeBehind="GioHang.aspx.cs" Inherits="DatMonOnline.NguoiDung.GioHang" %>
+
 <%@ Import Namespace="DatMonOnline" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <section>
+    <section class="book_section layout_padding">
         <div class="container">
             <div class="heading_container">
                 <div class="align-self-end">
-                    <asp:Label ID="lblMessage" runat="server" Visible="false" ></asp:Label>
+                    <asp:Label ID="lblMessage" runat="server" Visible="false"></asp:Label>
                 </div>
                 <h2>Giỏ hàng</h2>
             </div>
@@ -30,8 +31,6 @@
                         </thead>
 
                         <tbody>
-
-                        
                 </HeaderTemplate>
                 <ItemTemplate>
                     <tr>
@@ -46,21 +45,29 @@
                             <asp:HiddenField ID="hdProductID" runat="server" Value='<%# Eval("productID") %>' />
                             <%-- note, lưu ý lưu ý --%>
                             <asp:HiddenField ID="hdSoLuong" runat="server" Value='<%# Eval("SoLuong") %>' />
-                            <asp:HiddenField ID="hdSLSP" runat="server" Value='<%# Eval("slsp") %>' />                            
+                            <asp:HiddenField ID="hdSLSP" runat="server" Value='<%# Eval("slsp") %>' />
                         </td>
 
-                        <td>
+                        <%--<td>
                             <div class="product__details__option">
                                 <div class="quantity">
                                     <div class="pro-qty">
                                         <asp:TextBox ID="txtSoLuong" runat="server" TextMode="Number" Text='<%# Eval("soluong") %>'></asp:TextBox>
                                         <asp:RegularExpressionValidator ID="revSoLuong" runat="server" ErrorMessage="*" Font-Size="Small" ForeColor="Red"
-                                             ValidationExpression="[1-9]*" ControlToValidate="txtSoLuong" 
-                                             Display="Dynamic" SetFocusOnError="true" EnableClientScript="true" ></asp:RegularExpressionValidator>
+                                            ValidationExpression="[1-9]*" ControlToValidate="txtSoLuong"
+                                            Display="Dynamic" SetFocusOnError="true" EnableClientScript="true"></asp:RegularExpressionValidator>
 
                                     </div>
                                 </div>
                             </div>
+                        </td>--%>
+
+                        <%-- số lượng --%>
+                        <td>
+                            <asp:TextBox ID="txtSoLuong" runat="server" TextMode="Number" Text='<%# Eval("soluong") %>'></asp:TextBox>
+                            <asp:RegularExpressionValidator ID="revSoLuong" runat="server" ErrorMessage="*" Font-Size="Small" ForeColor="Red"
+                                ValidationExpression="[1-9]*" ControlToValidate="txtSoLuong"
+                                Display="Dynamic" SetFocusOnError="true" EnableClientScript="true"></asp:RegularExpressionValidator>
                         </td>
 
                         <td>
@@ -69,7 +76,7 @@
 
                         <td>
                             <asp:LinkButton ID="lbXoa" runat="server" Text="Xóa" CommandName="xoa" CommandArgument='<%# Eval("productID") %>'
-                                 OnClientClick="return confirm('Bạn có chắc chắn muốn xóa món này ra khỏi giỏ hàng?');"><i class="fa fa-close"></i></asp:LinkButton>
+                                OnClientClick="return confirm('Bạn có chắc chắn muốn xóa món này ra khỏi giỏ hàng?');"><i class="fa fa-close"></i></asp:LinkButton>
                         </td>
                     </tr>
                 </ItemTemplate>
@@ -86,9 +93,9 @@
 
                     <tr>
                         <td colspan="2" class="continue__btn">
-                            <a href="Menu.aspx" class="btn btn-info"><i class="fa fa-arrow-circle-left mr-2"> Tiếp tục mua sắm!</i></a>
+                            <a href="Menu.aspx" class="btn btn-info"><i class="fa fa-arrow-circle-left mr-2">Tiếp tục mua sắm!</i></a>
                         </td>
-                        
+
                         <td>
                             <asp:LinkButton ID="lbCapNhat" runat="server" CommandName="capnhat" CssClass="btn btn-warning">
                                 <i class="fa fa-refresh mr-2"></i> Cập nhật

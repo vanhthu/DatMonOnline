@@ -15,12 +15,14 @@ body {
     overflow:hidden;
     margin-right:20px;
 }
+
 .product__details__option .pro-qty{
     height: 50px;
     width: 140px;
     border: 1px solid #e1e1e1;
     padding: 0 20px;
 }
+
 .product__details__option .pro-qty .qtybtn{
     font-size: 16px;
     float: left;
@@ -46,8 +48,8 @@ body {
     float:left;
     text-align:center;
 }
-
 /* t?ng gi?m s? l??ng s?n ph?m*/
+
 .layout_padding {
   padding: 90px 0;
 }
