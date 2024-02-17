@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/NguoiDung/NguoiDung.Master" AutoEventWireup="true" CodeBehind="GioHang.aspx.cs" Inherits="DatMonOnline.NguoiDung.GioHang" %>
 <%@ Import Namespace="DatMonOnline" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -16,7 +17,7 @@
         <div class="container">
             <asp:Repeater ID="repeatSanPhamGioHang" runat="server" OnItemCommand="repeatSanPhamGioHang_ItemCommand" OnItemDataBound="repeatSanPhamGioHang_ItemDataBound">
                 <HeaderTemplate>
-                    <table>
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th>Tên</th>
@@ -38,7 +39,7 @@
                             <asp:Label ID="lblName" runat="server" Text='<%# Eval("name") %>'></asp:Label>
                         </td>
                         <td>
-                            <img width="60" src="<%# Utils.LayURLHinhAnh("imageURL") %>" />
+                            <img width="60" src="<%# Utils.LayURLHinhAnh(Eval("imageURL")) %>" />
                         </td>
                         <td>
                             <asp:Label ID="lblGia" runat="server" Text='<%# Eval("gia") %>'></asp:Label>
@@ -52,8 +53,8 @@
                             <div class="product__details__option">
                                 <div class="quantity">
                                     <div class="pro-qty">
-                                        <asp:TextBox ID="txtSoLuong" runat="server" TextMode="Number" Text="'<%# Eval("soluong") %>'"></asp:TextBox>
-                                        <asp:RegularExpressionValidator ID="revSoLuong" runat="server" ErrorMessage="*" Font-Size="Small"
+                                        <asp:TextBox ID="txtSoLuong" runat="server" TextMode="Number" Text='<%# Eval("soluong") %>'></asp:TextBox>
+                                        <asp:RegularExpressionValidator ID="revSoLuong" runat="server" ErrorMessage="*" Font-Size="Small" ForeColor="Red"
                                              ValidationExpression="[1-9]*" ControlToValidate="txtSoLuong" 
                                              Display="Dynamic" SetFocusOnError="true" EnableClientScript="true" ></asp:RegularExpressionValidator>
 
@@ -85,18 +86,18 @@
 
                     <tr>
                         <td colspan="2" class="continue__btn">
-                            <a href="Menu.aspx" class="btn btn-info"><i class="fa fa-arrow-circle-left mr-2">Tiếp tục mua sắm!</i></a>
+                            <a href="Menu.aspx" class="btn btn-info"><i class="fa fa-arrow-circle-left mr-2"> Tiếp tục mua sắm!</i></a>
                         </td>
                         
                         <td>
                             <asp:LinkButton ID="lbCapNhat" runat="server" CommandName="capnhat" CssClass="btn btn-warning">
-                                <i class="fa fa-refresh mr-2"></i>Cập nhật
+                                <i class="fa fa-refresh mr-2"></i> Cập nhật
                             </asp:LinkButton>
                         </td>
 
                         <td>
                             <asp:LinkButton ID="lbKiemTra" runat="server" CommandName="kiemtra" CssClass="btn btn-success">
-                                <i class="fa fa-arrow-circle-right mr-2"></i>Kiểm tra
+                                <i class="fa fa-arrow-circle-right mr-2"></i> Kiểm tra
                             </asp:LinkButton>
                         </td>
                     </tr>
