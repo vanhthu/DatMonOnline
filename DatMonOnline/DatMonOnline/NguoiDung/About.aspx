@@ -21,15 +21,19 @@
                Chúng tôi là Feane
               </h2>
             </div>
+            <h3>Mang đến cho bạn món ăn ưa thích, nóng hổi và ngon lành</h3>
             <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
+              Đặt đồ ăn giao hàng tận nhà nhanh chóng lấp đầy chiếc bụng đói của bạn với những món ngon yêu
+                thích và dịch vụ giao hàng “thần tốc”. Feane hiện đang có mặt tại nhiều tỉnh thành ở
+                Việt Nam: Thành phố Hồ Chí Minh, Hà Nội, Đà Nẵng, Vũng Tàu, Bình Dương, Đồng Nai, Cần Thơ,
+                Đà Lạt,…. Chúng tôi đang dần mở rộng thêm nhiều khu vực trong thời gian tới!
             </p>
-            <a href="">
-              Read More
-            </a>
+            <h3>Đặt đồ ăn online chỉ sau vài cú chạm.</h3>
+            <p>Feane giao hàng nhanh thần tốc, đảm bảo mang cho bạn bữa ăn nóng hổi và ngon lành,
+                  dù bạn đang ở đâu.
+            </p>
+            <h3>Đa dạng lựa chọn.</h3>
+            <p>Danh sách đa dạng các món ăn của chúng tôi có thể phục vụ cho mọi nhu cầu ăn uống của bạn. </p>
           </div>
         </div>
       </div>

@@ -107,6 +107,11 @@ h2 {
   margin-top: 10px;
   margin-bottom: 0;
 }
+.detail-box h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top:5px;
+}
 
 .heading_container.heading_center {
   -webkit-box-align: center;
