@@ -96,6 +96,49 @@ namespace DatMonOnline.NguoiDung
                 }
                 LaySanPhamTuGioHang();
             }
+
+            if(e.CommandName == "thanhtoan")
+            {
+                bool isTrue = false;
+                string ten = string.Empty;
+                // kiểm tra số lượng sản phẩm trước khi thanh toán
+                for (int i = 0; i < repeatSanPhamGioHang.Items.Count; i++)
+                {
+                    if (repeatSanPhamGioHang.Items[i].ItemType == ListItemType.Item || repeatSanPhamGioHang.Items[i].ItemType == ListItemType.AlternatingItem)
+                    {
+                        HiddenField _productID = repeatSanPhamGioHang.Items[i].FindControl("hdProductID") as HiddenField;
+                        HiddenField _SoLuong = repeatSanPhamGioHang.Items[i].FindControl("hdSoLuong") as HiddenField;
+                        HiddenField _SLSP = repeatSanPhamGioHang.Items[i].FindControl("hdSLSP") as HiddenField;
+                        Label productName = repeatSanPhamGioHang.Items[i].FindControl("lblName") as Label;
+
+                        int productID = Convert.ToInt32(_productID.Value);
+                        int soLuongGioHang = Convert.ToInt32(_SoLuong.Value);
+                        int soLuongSanPham = Convert.ToInt32(_SLSP.Value);
+                        
+                        if (soLuongSanPham > soLuongGioHang && soLuongSanPham > 2)
+                        {
+                            isTrue = true;
+                        }
+                        else 
+                        {
+                            isTrue = false;
+                            ten = productName.Text.ToString();
+                            break;
+                        }                        
+                    }
+                }
+
+                if (isTrue)
+                {
+                    Response.Redirect("ThanhToan.aspx");
+                }
+                else
+                {
+                    lblMessage.Visible = true;
+                    lblMessage.Text = "Món <b>'"+ten+"'</b> đã bán hàng hết.";
+                    lblMessage.CssClass = "alert alert-warning";
+                }
+            }
         }
 
         protected void repeatSanPhamGioHang_ItemDataBound(object sender, RepeaterItemEventArgs e)

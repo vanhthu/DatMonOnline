@@ -103,8 +103,8 @@
                         </td>
 
                         <td>
-                            <asp:LinkButton ID="lbKiemTra" runat="server" CommandName="kiemtra" CssClass="btn btn-success">
-                                <i class="fa fa-arrow-circle-right mr-2"></i> Kiểm tra
+                            <asp:LinkButton ID="lbThanhToan" runat="server" CommandName="thanhtoan" CssClass="btn btn-success">
+                                <i class="fa fa-arrow-circle-right mr-2"></i> Thanh toán
                             </asp:LinkButton>
                         </td>
                     </tr>
