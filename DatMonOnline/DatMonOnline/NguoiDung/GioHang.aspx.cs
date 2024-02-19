@@ -18,7 +18,8 @@ namespace DatMonOnline.NguoiDung
         decimal tongThanhTien = 0; 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            //
+            if (!IsPostBack) 
             {
                 if (Session["userID"] == null)
                 {
