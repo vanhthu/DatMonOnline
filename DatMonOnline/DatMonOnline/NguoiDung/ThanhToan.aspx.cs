@@ -13,5 +13,19 @@ namespace DatMonOnline.NguoiDung
         {
 
         }
+
+        protected void lbCardSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        protected void lbCODSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //protected void lbCODAddress_Click(object sender, EventArgs e){}
+
     }
 }

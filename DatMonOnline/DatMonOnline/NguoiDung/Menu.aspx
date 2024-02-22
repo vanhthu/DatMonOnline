@@ -25,7 +25,7 @@
                         <%-- tương tác với store procedure, cắt khoảng trắng --%>
 
                         <li data-filter=".<%# Regex.Replace(Eval("name").ToString().ToLower(), @"\s+", "") %>"
-                            data-id="<%# Eval("categoryID") %>" ><%# Eval("name") %></li>
+                            data-id="<%# Eval("categoryID") %>"><%# Eval("name") %></li>
 
                     </ItemTemplate>
                 </asp:Repeater>
