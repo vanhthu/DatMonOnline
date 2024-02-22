@@ -122,7 +122,7 @@ namespace DatMonOnline.NguoiDung
                         }
                         else 
                         {
-                            isTrue = false;
+                            isTrue = true;
                             ten = productName.Text.ToString();
                             break;
                         }                        
