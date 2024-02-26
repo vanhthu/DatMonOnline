@@ -109,13 +109,15 @@
                             <h2>Chúng tôi là Feane
                             </h2>
                         </div>
-                        <p>
-                            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
-                        </p>
-                        <a href="">Đọc thêm
+                        <ul>
+                            <li>Mang đến cho bạn món ăn ưa thích, nóng hổi và ngon lành.</li>
+                           <br >
+                           <li>Đặt đồ ăn online chỉ sau vài cú chạm.</li>
+                            <br />
+                           <li>Đa dạng lựa chọn.</li>
+                        </ul>
+                           
+                        <a href="About.aspx">Đọc thêm
                         </a>
                     </div>
                 </div>
@@ -139,12 +141,15 @@
                         <div class="box">
                             <div class="detail-box">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                    M đi ăn tối r đông mà nv phục vụ siêu nhanh. Cửa hàng đông k còn chỗ ngồi. Gà ngon, k bị bở.
+                                    Mì Ý cũng vừa vị. M đang ăn thì có chú ong đáng yêu xuống nhảy và đập tay với mn. M ng lớn cũng
+                                    thích còn các bé thì mê tít lunn.
+                                    Nch sẽ quay lại
                                 </p>
-                                <h6>Moana Michell
+                                <h6>Hoài Anh
                                 </h6>
                                 <p>
-                                    magna aliqua
+                                    Ngon, nv nhiệt tình
                                 </p>
                             </div>
                             <div class="img-box">
@@ -156,12 +161,16 @@
                         <div class="box">
                             <div class="detail-box">
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                    Lần thứ 2 order tại Mc thấy rất hài lòng về chất lượng đồ ăn ở đây.
+                                    Thịt gà lớp vỏ giòn, thịt bên trong không bị khô. Mặc dù là gọi về nhưng khi nhận đồ ăn vẫn rất nóng hổi
+                                    Thịt heo mềm, đậm vị và phần nước sốt cũng rất ngon.
+                                    Sẽ ủng hộ Mc dài dài.
+                                    Rate: Chất lượng 8/10
                                 </p>
-                                <h6>Mike Hamell
+                                <h6>Hoàng Lê
                                 </h6>
                                 <p>
-                                    magna aliqua
+                                    Hài Lòng
                                 </p>
                             </div>
                             <div class="img-box">
