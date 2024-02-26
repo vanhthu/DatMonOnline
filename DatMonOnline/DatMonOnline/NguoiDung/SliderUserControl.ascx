@@ -9,14 +9,15 @@
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
                     <h1>
-                      Fast Food Restaurant
+                      Nhà hàng thức ăn nhanh
                     </h1>
                     <p>
-                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                        Là loại hình nhà hàng với tốc độ phục vụ nhanh chóng, thực đơn tiện lợi. Thực đơn của nhà hàng đồ ăn nhanh thường
+                        là các món ăn nhanh như gà rán KFC, hamburger, pizza, sandwich, khoai tây chiên, nước ngọt…
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
-                        Order Now
+                        Đặt Hàng Ngay
                       </a>
                     </div>
                   </div>
@@ -30,14 +31,16 @@
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
                     <h1>
-                      Fast Food Restaurant
+                      Rộng rãi, sạch sẽ
                     </h1>
                     <p>
-                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                        Không gian rộng rãi, giao diện đơn giản,  nhà hàng đồ ăn nhanh là lựa chọn phổ biến cho những người có 
+                        lịch trình bận rộn, muốn thưởng thức bữa ăn nhanh
+                        gọn mà vẫn đảm bảo hương vị.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
-                        Order Now
+                        Đặt Hàng Ngay
                       </a>
                     </div>
                   </div>
@@ -51,14 +54,15 @@
                 <div class="col-md-7 col-lg-6 ">
                   <div class="detail-box">
                     <h1>
-                      Fast Food Restaurant
+                      Nhanh chóng, rẻ
                     </h1>
                     <p>
-                      Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.
+                        Tốc độ phục vụ nhanh chóng. Điểm mạnh chính của nhà hàng đồ ăn nhanh là khả năng phục vụ nhanh chóng.
+                        Giá cả phải chăng, thích hợp với người tiêu dùng từ nhiều tầng lớp khác nhau.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
-                        Order Now
+                        Đặt Hàng Ngay
                       </a>
                     </div>
                   </div>
