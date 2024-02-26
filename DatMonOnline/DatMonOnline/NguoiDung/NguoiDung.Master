@@ -218,7 +218,7 @@
                             <a href="" class="footer-logo">Feane
                             </a>
                             <p>
-                                Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
+                                Là loại hình nhà hàng thức ăn nhanh với tốc độ phục vụ nhanh chóng, thực đơn tiện lợi, giá cả phải chăng.
                             </p>
                             <div class="footer_social">
                                 <a href="">
@@ -252,11 +252,8 @@
                 </div>
                 <div class="footer-info">
                     <p>
-                        &copy; <span id="displayYear"></span>All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates</a><br>
-                        <br>
-                        &copy; <span id="displayYear"></span>Distributed By
-          <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+                        &copy; <span id="displayYear"></span> &nbsp
+                        <a href="TrangChu.aspx">Feane</a>
                     </p>
                 </div>
             </div>
