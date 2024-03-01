@@ -90,7 +90,10 @@ namespace DatMonOnline.NguoiDung
             });
 
             cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
-            cmd = new SqlCommand("LuuThongTinThanhToan", cn);
+            cn.Open();
+            #region sql transaction
+            transaction = cn.BeginTransaction();
+            cmd = new SqlCommand("LuuThongTinThanhToan", cn, transaction);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@ten", ten);
             cmd.Parameters.AddWithValue("@sothe", sothe);
@@ -105,7 +108,8 @@ namespace DatMonOnline.NguoiDung
                 cmd.ExecuteNonQuery();
                 paymentID = Convert.ToInt32(cmd.Parameters["insertedID"].Value);
 
-                cmd = new SqlCommand("GIOHANG_CRUD", cn);
+                #region lấy sản phẩm
+                cmd = new SqlCommand("GIOHANG_CRUD", cn, transaction);
                 cmd.Parameters.AddWithValue("@action", "SELECT");
                 cmd.Parameters.AddWithValue("@userID", Session["userID"]);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -114,17 +118,76 @@ namespace DatMonOnline.NguoiDung
                 {
                     productID = (int)dr["productID"];
                     quantity = (int)dr["soluong"];
+                    // cập nhật số lượng món ăn
+                    //CapNhatSoLuong();
+                    // xóa món ăn
+                    //XoaMonAn();
+
+                    dt.Rows.Add(Utils.GetUniqueID(), productID, quantity, (int)Session["userID"], "Pending", paymentID, Convert.ToDateTime(DateTime.Now));
                 }
+                dr.Close();
+                #endregion lấy sản phẩm
             }
             catch (Exception e)
             {
-
+                try
+                {
+                    transaction.Rollback();
+                }
+                catch(Exception ex)
+                {
+                    Response.Write("<script>alert('"+ex.Message+"');</script>");
+                }
             }
+            #endregion sql transaction
             finally
             {
                 cn.Close();
             }
         }
+
+        void CapNhatSoLuong(int _productID, int soluong, SqlTransaction sqlTransaction, SqlConnection sqlConnection)
+        {
+            int dbQuantity;
+            cmd = new SqlCommand("SANPHAM_CRUD", sqlConnection, sqlTransaction);
+            cmd.Parameters.AddWithValue("@action", "GETBYID");
+            cmd.Parameters.AddWithValue("@productID", _productID);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            try
+            {
+                dr1 = cmd.ExecuteReader();
+                while (dr1.Read())
+                {
+                    dbQuantity = (int)dr1["soluong"];
+                    if(dbQuantity > soluong && dbQuantity > 2)
+                    {
+                        dbQuantity = dbQuantity - soluong;
+                        cmd = new SqlCommand("SANPHAM_CRUD", sqlConnection, sqlTransaction);
+                        cmd.Parameters.AddWithValue("@action", "CAPNHATSOLUONG");
+                        cmd.Parameters.AddWithValue("@soluong", soluong);
+                        cmd.Parameters.AddWithValue("@productID", _productID);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                dr1.Close();
+            }
+            catch(Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+
+            }
+        }
+        void XoaSanPham(int _productID, int soluong, SqlTransaction sqlTransaction, SqlConnection sqlConnection)
+        {
+            cmd = new SqlCommand("SANPHAM_CRUD", sqlConnection, sqlTransaction);
+            cmd.Parameters.AddWithValue("@action", "CAPNHATSOLUONG");
+            cmd.Parameters.AddWithValue("@soluong", soluong);
+            cmd.Parameters.AddWithValue("@productID", _productID);
+            cmd.CommandType = CommandType.StoredProcedure;
+        }
+
 
         //protected void lbCODAddress_Click(object sender, EventArgs e){}
 

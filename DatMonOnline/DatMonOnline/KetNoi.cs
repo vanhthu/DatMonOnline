@@ -99,6 +99,13 @@ namespace DatMonOnline
             da.Fill(dt);
             return dt.Rows.Count;
         }
+
+        public static string GetUniqueID()
+        {
+            Guid guid = new Guid();
+            String uniqueID = guid.ToString();
+            return uniqueID;
+        }
     }    
 
 }
