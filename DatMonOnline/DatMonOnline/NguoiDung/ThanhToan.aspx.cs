@@ -102,11 +102,11 @@ namespace DatMonOnline.NguoiDung
             cmd.Parameters.AddWithValue("@diachi", diaChi);
             cmd.Parameters.AddWithValue("@cheDoThanhToan", cheDoThanhToan);
             cmd.Parameters.AddWithValue("@insertedID", SqlDbType.Int);
-            cmd.Parameters["insertedID"].Direction = ParameterDirection.Output;
+            cmd.Parameters["@insertedID"].Direction = ParameterDirection.Output;
             try
             {
                 cmd.ExecuteNonQuery();
-                paymentID = Convert.ToInt32(cmd.Parameters["insertedID"].Value);
+                paymentID = Convert.ToInt32(cmd.Parameters["@insertedID"].Value);
 
                 #region lấy sản phẩm
                 cmd = new SqlCommand("GIOHANG_CRUD", cn, transaction);

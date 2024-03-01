@@ -185,6 +185,7 @@
     <Content Include="NguoiDung\DangKy.aspx" />
     <Content Include="NguoiDung\DangNhap.aspx" />
     <Content Include="NguoiDung\GioHang.aspx" />
+    <Content Include="NguoiDung\HoaDon.aspx" />
     <Content Include="NguoiDung\Menu.aspx" />
     <Content Include="NguoiDung\SliderUserControl.ascx" />
     <Content Include="NguoiDung\ThanhToan.aspx" />
@@ -289,6 +290,13 @@
     </Compile>
     <Compile Include="NguoiDung\GioHang.aspx.designer.cs">
       <DependentUpon>GioHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NguoiDung\HoaDon.aspx.cs">
+      <DependentUpon>HoaDon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NguoiDung\HoaDon.aspx.designer.cs">
+      <DependentUpon>HoaDon.aspx</DependentUpon>
     </Compile>
     <Compile Include="NguoiDung\Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
