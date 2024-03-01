@@ -79,14 +79,14 @@ namespace DatMonOnline.NguoiDung
             dt = new DataTable();
             dt.Columns.AddRange(new DataColumn[7]
             {
-                // tương tác với bảng GOIMON
+                // tương tác với bảng CHITIETDATHANG
                 new DataColumn("sodonhang", typeof(string)),
                 new DataColumn("productID", typeof(int)),
                 new DataColumn("soluong", typeof(int)),
                 new DataColumn("userID", typeof(int)),
                 new DataColumn("trangthai", typeof(string)),
                 new DataColumn("paymentID", typeof(int)),
-                new DataColumn("ngaytao", typeof(DateTime)) // ngayDatHang
+                new DataColumn("ngaydathang", typeof(DateTime)) 
             });
 
             cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
