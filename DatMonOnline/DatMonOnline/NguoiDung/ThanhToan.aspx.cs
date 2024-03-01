@@ -46,7 +46,7 @@ namespace DatMonOnline.NguoiDung
 
             if (Session["userID"] != null)
             {
-
+                ThanhToanDonHang(_ten, _soThe, _ngayHetHan, _CVV, _diaChi, _CheDoThanhToan);
             }
             else
             {
@@ -62,7 +62,7 @@ namespace DatMonOnline.NguoiDung
 
             if (Session["userID"] != null)
             {
-
+                ThanhToanDonHang(_ten, _soThe, _ngayHetHan, _CVV, _diaChi, _CheDoThanhToan);
             }
             else
             {
@@ -119,14 +119,29 @@ namespace DatMonOnline.NguoiDung
                     productID = (int)dr["productID"];
                     quantity = (int)dr["soluong"];
                     // cập nhật số lượng món ăn
-                    //CapNhatSoLuong();
+                    CapNhatSoLuong(productID, quantity, transaction, cn);
                     // xóa món ăn
-                    //XoaMonAn();
+                    XoaMonAn(productID, transaction, cn);
 
                     dt.Rows.Add(Utils.GetUniqueID(), productID, quantity, (int)Session["userID"], "Pending", paymentID, Convert.ToDateTime(DateTime.Now));
                 }
                 dr.Close();
                 #endregion lấy sản phẩm
+
+                #region Chi tiết thông tin đặt hàng
+                if(dt.Rows.Count > 0)
+                {
+                    cmd = new SqlCommand("LuuThongTinDatHang", cn, transaction);
+                    cmd.Parameters.AddWithValue("@tblOrders", dt);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.ExecuteNonQuery();
+                }
+                #endregion Chi tiết thông tin đặt hàng
+                transaction.Commit();
+                lblMessage.Visible = true;
+                lblMessage.Text = "Đặt hàng thành công";
+                lblMessage.CssClass = "alert alert-success";
+                Response.AddHeader("REFRESH", "1;URL=HoaDon.aspx?id" + paymentID);
             }
             catch (Exception e)
             {
@@ -165,7 +180,7 @@ namespace DatMonOnline.NguoiDung
                         dbQuantity = dbQuantity - soluong;
                         cmd = new SqlCommand("SANPHAM_CRUD", sqlConnection, sqlTransaction);
                         cmd.Parameters.AddWithValue("@action", "CAPNHATSOLUONG");
-                        cmd.Parameters.AddWithValue("@soluong", soluong);
+                        cmd.Parameters.AddWithValue("@soluong", dbQuantity);
                         cmd.Parameters.AddWithValue("@productID", _productID);
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.ExecuteNonQuery();
@@ -179,13 +194,21 @@ namespace DatMonOnline.NguoiDung
 
             }
         }
-        void XoaSanPham(int _productID, int soluong, SqlTransaction sqlTransaction, SqlConnection sqlConnection)
+        void XoaMonAn(int _productID, SqlTransaction sqlTransaction, SqlConnection sqlConnection)
         {
-            cmd = new SqlCommand("SANPHAM_CRUD", sqlConnection, sqlTransaction);
-            cmd.Parameters.AddWithValue("@action", "CAPNHATSOLUONG");
-            cmd.Parameters.AddWithValue("@soluong", soluong);
+            cmd = new SqlCommand("GIOHANG_CRUD", sqlConnection, sqlTransaction);
+            cmd.Parameters.AddWithValue("@action", "DELETE");
             cmd.Parameters.AddWithValue("@productID", _productID);
+            cmd.Parameters.AddWithValue("@userID", Session["userID"]);
             cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+            }
         }
 
 
