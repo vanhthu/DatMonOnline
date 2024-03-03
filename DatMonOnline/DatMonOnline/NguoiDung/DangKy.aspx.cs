@@ -50,12 +50,13 @@ namespace DatMonOnline.NguoiDung
             cmd.Parameters.AddWithValue("@action", userID == 0 ? "INSERT" : "UPDATE");
             cmd.Parameters.AddWithValue("@userID", userID);
             cmd.Parameters.AddWithValue("@name", txtName.Text.Trim());
-            cmd.Parameters.AddWithValue("@userName", txtUserName.Text.Trim());
+            cmd.Parameters.AddWithValue("@username", txtUserName.Text.Trim());
             cmd.Parameters.AddWithValue("@sdt", txtSoDT.Text.Trim());
             cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
             cmd.Parameters.AddWithValue("@diachi", txtDiaChi.Text.Trim());
-            cmd.Parameters.AddWithValue("@postCode", txtMaXacNhan.Text.Trim());
-            cmd.Parameters.AddWithValue("@matKhau", txtMatKhau.Text.Trim());
+            //cmd.Parameters.AddWithValue("@postCode", txtMaXacNhan.Text.Trim());
+            cmd.Parameters.AddWithValue("@password", txtMatKhau.Text.Trim());
+            cmd.Parameters.AddWithValue("@repassword", txtNhapLaiMatKhau.Text.Trim());
 
             if (fuUserImage.HasFile)
             {
@@ -140,11 +141,11 @@ namespace DatMonOnline.NguoiDung
             if(dt.Rows.Count == 1)
             {
                 txtName.Text = dt.Rows[0]["name"].ToString();
-                txtUserName.Text = dt.Rows[0]["userName"].ToString();
+                txtUserName.Text = dt.Rows[0]["username"].ToString();
                 txtSoDT.Text = dt.Rows[0]["sdt"].ToString();
                 txtEmail.Text = dt.Rows[0]["email"].ToString();
                 txtDiaChi.Text = dt.Rows[0]["diachi"].ToString();
-                txtMaXacNhan.Text = dt.Rows[0]["postCode"].ToString();
+                //txtMaXacNhan.Text = dt.Rows[0]["postCode"].ToString();
                 imgUser.ImageUrl = String.IsNullOrEmpty(dt.Rows[0]["imageURL"].ToString()) ?
                     "../Images/No_image.png" :
                     "../" + dt.Rows[0]["imageURL"].ToString();
@@ -153,7 +154,8 @@ namespace DatMonOnline.NguoiDung
                 imgUser.Height = 200;
                 txtMatKhau.TextMode = TextBoxMode.SingleLine;
                 txtMatKhau.ReadOnly = true;
-                txtMatKhau.Text = dt.Rows[0]["matKhau"].ToString();
+                txtMatKhau.Text = dt.Rows[0]["password"].ToString();
+                txtNhapLaiMatKhau.Text = dt.Rows[0]["repassword"].ToString();
 
             }
             lblHeaderMessage.Text = "<h2>Cập nhật thông tin</h2>";
@@ -167,8 +169,9 @@ namespace DatMonOnline.NguoiDung
             txtSoDT.Text = string.Empty;
             txtEmail.Text = string.Empty;
             txtDiaChi.Text = string.Empty;
-            txtMaXacNhan.Text = string.Empty;
+            //txtMaXacNhan.Text = string.Empty;
             txtMatKhau.Text = string.Empty;
+            txtNhapLaiMatKhau.Text = string.Empty;
 
         }
     }

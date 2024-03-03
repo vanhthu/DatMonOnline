@@ -141,33 +141,6 @@ namespace DatMonOnline.NguoiDung
         protected global::System.Web.UI.WebControls.TextBox txtDiaChi;
 
         /// <summary>
-        /// rfvMaXacNhan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMaXacNhan;
-
-        /// <summary>
-        /// revMaXacNhan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator revMaXacNhan;
-
-        /// <summary>
-        /// txtMaXacNhan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMaXacNhan;
-
-        /// <summary>
         /// fuUserImage control.
         /// </summary>
         /// <remarks>
@@ -177,13 +150,13 @@ namespace DatMonOnline.NguoiDung
         protected global::System.Web.UI.WebControls.FileUpload fuUserImage;
 
         /// <summary>
-        /// rfvMatKhau control.
+        /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMatKhau;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
         /// txtMatKhau control.
@@ -193,6 +166,24 @@ namespace DatMonOnline.NguoiDung
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMatKhau;
+
+        /// <summary>
+        /// rfvNhapLaiMatKhau control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvNhapLaiMatKhau;
+
+        /// <summary>
+        /// txtNhapLaiMatKhau control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNhapLaiMatKhau;
 
         /// <summary>
         /// btnDangKy control.

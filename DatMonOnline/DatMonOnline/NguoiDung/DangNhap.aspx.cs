@@ -36,8 +36,8 @@ namespace DatMonOnline.NguoiDung
                 cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
                 cmd = new SqlCommand("NGUOIDUNG_CRUD", cn);
                 cmd.Parameters.AddWithValue("@action", "SELECTFORLOGIN");
-                cmd.Parameters.AddWithValue("@userName", txtUserName.Text.Trim());
-                cmd.Parameters.AddWithValue("@matKhau", txtMatKhau.Text.Trim());
+                cmd.Parameters.AddWithValue("@username", txtUserName.Text.Trim());
+                cmd.Parameters.AddWithValue("@password", txtMatKhau.Text.Trim());
                 cmd.CommandType = CommandType.StoredProcedure;
                 da = new SqlDataAdapter(cmd);
                 dt = new DataTable();
@@ -46,7 +46,7 @@ namespace DatMonOnline.NguoiDung
                 if (dt.Rows.Count == 1)
                 {
 
-                    Session["userName"] = txtUserName.Text.Trim();
+                    Session["username"] = txtUserName.Text.Trim();
                     Session["userID"] = dt.Rows[0]["userID"];
                     Response.Redirect("TrangChu.aspx");
 

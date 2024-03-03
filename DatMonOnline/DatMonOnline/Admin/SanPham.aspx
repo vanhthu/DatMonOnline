@@ -124,7 +124,7 @@
                                                             Display="Dynamic" SetFocusOnError="true"
                                                             ControlToValidate="ddlDanhMuc" InitialValue="0">
                                                         </asp:RequiredFieldValidator>
-                                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs %>" SelectCommand="SELECT [categoryID], [name] FROM [PHANLOAI]"></asp:SqlDataSource>
+                                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cs %>" SelectCommand="SELECT [categoryID], [name] FROM [DANHMUC]"></asp:SqlDataSource>
                                                     </div>
                                                 </div>
 

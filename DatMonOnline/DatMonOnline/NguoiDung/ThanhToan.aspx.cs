@@ -91,11 +91,12 @@ namespace DatMonOnline.NguoiDung
 
             cn = new SqlConnection(KetNoi.LayChuoiKetNoi());
             cn.Open();
+
             #region sql transaction
             transaction = cn.BeginTransaction();
             cmd = new SqlCommand("LuuThongTinThanhToan", cn, transaction);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@ten", ten);
+            cmd.Parameters.AddWithValue("@name", ten);
             cmd.Parameters.AddWithValue("@sothe", sothe);
             cmd.Parameters.AddWithValue("@ngayHetHan", ngayHetHan);
             cmd.Parameters.AddWithValue("@cvv", cvv);

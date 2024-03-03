@@ -58,7 +58,7 @@
                                                                 <%-- các cột tương đương với database --%>
                                                                 <td class="table-plus"><%# Eval("STT") %> </td>
                                                                 <td> <%# Eval("name") %> </td>
-                                                                <td> <%# Eval("userName") %> </td>
+                                                                <td> <%# Eval("username") %> </td>
                                                                 <td> <%# Eval("email") %> </td>
                                                                 <td><%# Eval("ngaytao") %> </td>
                                                                 <td>

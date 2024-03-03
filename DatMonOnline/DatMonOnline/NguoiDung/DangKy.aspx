@@ -87,7 +87,7 @@
 
                         </div>
 
-                        <div>
+                        <%--<div>
                             <asp:RequiredFieldValidator ID="rfvMaXacNhan" runat="server" ErrorMessage="Vui lòng nhập vào mã xác nhận!" ControlToValidate="txtMaXacNhan"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="revMaXacNhan" runat="server" ErrorMessage="Mã phải có 6 số!" ControlToValidate="txtMaXacNhan"
@@ -95,16 +95,26 @@
                             <asp:TextBox ID="txtMaXacNhan" runat="server" CssClass="form-control" placeholder="Nhập vào mã xác nhận"
                                 ToolTip="Mã xác nhận" TextMode="Number"></asp:TextBox>
 
-                        </div>
+                        </div>--%>
+
                         <div>
                             <asp:FileUpload ID="fuUserImage" runat="server" CssClass="form-control" ToolTip="Ảnh người dùng" onchange="ImagePreview(this);" />
 
                         </div>
+
                         <div>
-                            <asp:RequiredFieldValidator ID="rfvMatKhau" runat="server" ErrorMessage="Vui lòng nhập vào mật khẩu!" ControlToValidate="txtMatKhau"
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Vui lòng nhập vào mật khẩu!" ControlToValidate="txtMatKhau"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
                             <asp:TextBox ID="txtMatKhau" runat="server" CssClass="form-control" placeholder="Nhập vào mật khẩu"
                                 ToolTip="Mật khẩu" TextMode="Password"></asp:TextBox>
+
+                        </div>
+
+                        <div>
+                            <asp:RequiredFieldValidator ID="rfvNhapLaiMatKhau" runat="server" ErrorMessage="Vui lòng nhập lại mật khẩu!" ControlToValidate="txtNhapLaiMatKhau"
+                                ForeColor="Red" Display="Dynamic" SetFocusOnError="true"></asp:RequiredFieldValidator>
+                            <asp:TextBox ID="txtNhapLaiMatKhau" runat="server" CssClass="form-control" placeholder="Nhập vào mật khẩu"
+                                ToolTip="Nhập lại mật khẩu" TextMode="Password"></asp:TextBox>
 
                         </div>
 

@@ -39,7 +39,7 @@
                                         <h6 class="d-block" style="font-size: 1.5rem; font-weight: bold">
                                             <a href="javascript:void(0);">
                                                 <asp:Label ID="lblUserName" runat="server" ToolTip="Tên người dùng"> 
-                                                            @<%Response.Write(Session["userName"]); %>
+                                                            @<%Response.Write(Session["username"]); %>
                                                 </asp:Label>
                                             </a>
                                         </h6>
@@ -99,7 +99,7 @@
                                                             <label style="font-weight:bold">Tên người dùng</label>
                                                         </div>
                                                         <div class="col-md-8 col-6">
-                                                            <%# Eval("userName") %>
+                                                            <%# Eval("username") %>
                                                         </div>
                                                     </div>
                                                     <hr />
@@ -126,10 +126,12 @@
                                                     
                                                     <div class="row">
                                                         <div class="col-sm-3 col-md-2 col-5">
-                                                            <label style="font-weight:bold">Mã bưu chính</label>
+                                                            <%--<label style="font-weight:bold">Mã bưu chính</label>--%>
+                                                            <label style="font-weight:bold">Mật khẩu</label>
                                                         </div>
                                                         <div class="col-md-8 col-6">
-                                                            <%# Eval("postCode") %>
+                                                            <%# Eval("password") %> 
+                                                            <%-- postcode --%>
                                                         </div>
                                                     </div>
                                                     <hr />

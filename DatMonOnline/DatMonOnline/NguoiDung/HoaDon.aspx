@@ -41,7 +41,7 @@
                         <%-- số seri để định danh hóa đơn --%>
                         <td><%# Eval("soseri") %></td>
                         <td><%# Eval("madonhang") %></td>
-                        <td><%# Eval("ten") %></td>
+                        <td><%# Eval("ten") %></td> 
                         <td><%# string.IsNullOrEmpty(Eval("gia").ToString()) ? "" :"VNĐ"+Eval("gia") %></td>
                         <td><%# Eval("soluong") %></td>
                         <td><%# Eval("tongtien") %></td>
