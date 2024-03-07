@@ -24,7 +24,7 @@ namespace DatMonOnline.Admin
         {
             if (!IsPostBack)
             {
-                Session["breadCrum"] = "Category";
+                Session["breadCrum"] = "Danh mục";
                 if (Session["admin"] == null)
                 {
                     Response.Redirect("../NguoiDung/DangNhap.aspx");

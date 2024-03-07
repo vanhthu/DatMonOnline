@@ -25,21 +25,21 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="form_container">
-                        <img id="userLogin" src="../Images/login.jpg" alt="" class="img-thumbnail" />
+                        <img id="userLogin" src="../Images/login.jpg" alt="" class="img-thumbnail" style="border:none"/>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="form_container">
+                    <div class="form_container" style="margin-top:80px">
                         <div>
-                            <asp:RequiredFieldValidator ID="rfvUserName" runat="server" ErrorMessage="Tên là bắt buộc" ControlToValidate="txtUserName"
+                            <asp:RequiredFieldValidator ID="rfvUserName" runat="server" ErrorMessage="Vui lòng nhập vào tên!" ControlToValidate="txtUserName"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true" Font-Size="Small"></asp:RequiredFieldValidator>
-                            <asp:TextBox ID="txtUserName" runat="server" CssClass="form-control" placeholder="Nhập vào tên" ToolTip="tên"></asp:TextBox>
+                            <asp:TextBox ID="txtUserName" runat="server" CssClass="form-control" placeholder="Nhập vào tên" ToolTip="Tên người dùng"></asp:TextBox>
                         </div>
 
                         <div>
-                            <asp:RequiredFieldValidator ID="rfvMatKhau" runat="server" ErrorMessage="Mật khẩu là bắt buộc" ControlToValidate="txtMatKhau"
+                            <asp:RequiredFieldValidator ID="rfvMatKhau" runat="server" ErrorMessage="Vui lòng nhập vào mật khẩu!" ControlToValidate="txtMatKhau"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true" Font-Size="Small"></asp:RequiredFieldValidator>
-                            <asp:TextBox ID="txtMatKhau" runat="server" CssClass="form-control" placeholder="Nhập vào mật khẩu" ToolTip="mật khẩu"></asp:TextBox>
+                            <asp:TextBox ID="txtMatKhau" runat="server" CssClass="form-control" placeholder="Nhập vào mật khẩu" ToolTip="Mật khẩu"></asp:TextBox>
                         </div>
 
 
