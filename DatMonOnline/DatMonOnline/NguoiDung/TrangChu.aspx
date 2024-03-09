@@ -153,7 +153,7 @@
                                 </p>
                             </div>
                             <div class="img-box">
-                                <img src="../Style/images/client1.jpg" alt="" class="box-img">
+                                <img src="../Style/images/demokh1.jpg" alt="" class="box-img">
                             </div>
                         </div>
                     </div>
@@ -174,7 +174,7 @@
                                 </p>
                             </div>
                             <div class="img-box">
-                                <img src="../Style/images/client2.jpg" alt="" class="box-img">
+                                <img src="../Style/images/demokh.jpg" alt="" class="box-img">
                             </div>
                         </div>
                     </div>
