@@ -106,7 +106,7 @@
                 <div class="col-md-6">
                     <div class="detail-box">
                         <div class="heading_container">
-                            <h2>Chúng tôi là Feane
+                            <h2>Chúng tôi là FoodBook
                             </h2>
                         </div>
                         <ul>

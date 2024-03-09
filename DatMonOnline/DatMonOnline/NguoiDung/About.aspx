@@ -18,7 +18,7 @@
           <div class="detail-box">
             <div class="heading_container">
               <h2>
-               Chúng tôi là Feane
+               Chúng tôi là FoodBook
               </h2>
             </div>
             <h3>Mang đến cho bạn món ăn ưa thích, nóng hổi và ngon lành</h3>

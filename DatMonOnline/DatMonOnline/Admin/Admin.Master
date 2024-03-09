@@ -33,6 +33,27 @@
     <link rel="stylesheet" type="text/css" href="../assets/datatables/css/icon-font.min.css">
     <%-- Datatable files end --%>
 
+    <style>
+        /*.navbar-brand {
+            display: inline-block;
+            padding-top: 0.3125rem;
+            padding-bottom: 0.3125rem;
+            margin-right: 1rem;
+            font-size: 1.25rem;
+            line-height: inherit;
+            white-space: nowrap;
+        }*/
+
+        .navbar-brand {
+            font-family: 'Dancing Script', cursive;
+        }
+
+            .navbar-brand span {
+                font-weight: bold;
+                font-size: 32px;
+                color: #ffffff;
+            }
+    </style>
 
     <script>
         $(function () {
@@ -106,8 +127,12 @@
                             <a class="mobile-menu" id="mobile-collapse" href="#!">
                                 <i class="ti-menu"></i>
                             </a>
-                            <a href="index.html">
-                                <img class="img-fluid" src="../assets/images/logo.png" alt="Theme-Logo" />
+                            <%--<a href="GiaoDienChinh.aspx">
+                                <img class="img-fluid" src="../assets/images/logo.png" alt="Theme-Logo" />                               
+                            </a>--%>
+                            <a class="navbar-brand" href="GiaoDienChinh.aspx">
+                                <span>FoodBook
+                                </span>
                             </a>
                             <a class="mobile-options">
                                 <i class="ti-more"></i>
@@ -249,7 +274,7 @@
                                             </li>
                                             <li class="breadcrumb-item"><a href="GiaoDienChinh.aspx">Trang chủ</a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="#"> <%Response.Write(Session["breadCrum"]); %> </a>
+                                            <li class="breadcrumb-item"><a href="#"><%Response.Write(Session["breadCrum"]); %> </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -269,7 +294,7 @@
     </form>
 
     <!-- Required Jquery -->
-<%--    <script type="text/javascript" src="../assets/js/jquery/jquery.min.js"></script>--%>
+    <%--    <script type="text/javascript" src="../assets/js/jquery/jquery.min.js"></script>--%>
     <script type="text/javascript" src="../assets/js/jquery-ui/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../assets/js/popper.js/popper.min.js"></script>
     <script type="text/javascript" src="../assets/js/bootstrap/js/bootstrap.min.js"></script>
@@ -322,6 +347,5 @@
     <%-- Cài đặt bảng --%>
     <script src="../assets/datatables/js/datatable-setting.js"></script>
     <%-- Datatables js end --%>
-
 </body>
 </html>

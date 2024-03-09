@@ -33,7 +33,7 @@
                         <div>
                             <asp:RequiredFieldValidator ID="rfvUserName" runat="server" ErrorMessage="Vui lòng nhập vào tên!" ControlToValidate="txtUserName"
                                 ForeColor="Red" Display="Dynamic" SetFocusOnError="true" Font-Size="Small"></asp:RequiredFieldValidator>
-                            <asp:TextBox ID="txtUserName" runat="server" CssClass="form-control" placeholder="Nhập vào tên" ToolTip="Tên người dùng"></asp:TextBox>
+                            <asp:TextBox ID="txtUserName" runat="server" CssClass="form-control" placeholder="Nhập vào tên tài khoản" ToolTip="Tên tài khoản"></asp:TextBox>
                         </div>
 
                         <div>

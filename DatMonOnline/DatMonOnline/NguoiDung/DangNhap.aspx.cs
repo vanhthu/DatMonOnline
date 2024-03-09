@@ -54,7 +54,7 @@ namespace DatMonOnline.NguoiDung
                 else
                 {
                     lblMessage.Visible = true;
-                    lblMessage.Text = "Không thành công!";
+                    lblMessage.Text = "Tên tài khoản hoặc mật khẩu bị sai. Vui lòng nhập lại!";
                     lblMessage.CssClass = "alert alert-danger";
                 }
 

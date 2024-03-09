@@ -18,7 +18,7 @@
     <meta name="author" content="" />
     <link rel="shortcut icon" href="../Style/images/favicon.png" type="">
 
-    <title>Feane </title>
+    <title>FoodBook</title>
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="../Style/css/bootstrap.css" />
@@ -67,7 +67,7 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-lg custom_nav-container ">
                         <a class="navbar-brand" href="TrangChu.aspx">
-                            <span>Feane
+                            <span>FoodBook
                             </span>
                         </a>
 
@@ -215,7 +215,7 @@
                     </div>
                     <div class="col-md-4 footer-col">
                         <div class="footer_detail">
-                            <a href="" class="footer-logo">Feane
+                            <a href="" class="footer-logo">FoodBook
                             </a>
                             <p>
                                 Là loại hình nhà hàng thức ăn nhanh với tốc độ phục vụ nhanh chóng, thực đơn tiện lợi, giá cả phải chăng.
@@ -246,14 +246,14 @@
                             Mỗi ngày
                         </p>
                         <p>
-                            10.00 Sáng -10.00 Tối
+                            5.00 Sáng - 10.00 Tối
                         </p>
                     </div>
                 </div>
                 <div class="footer-info">
                     <p>
                         &copy; <span id="displayYear"></span> &nbsp
-                        <a href="TrangChu.aspx">Feane</a>
+                        <a href="TrangChu.aspx">FoodBook</a>
                     </p>
                 </div>
             </div>

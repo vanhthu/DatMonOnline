@@ -130,7 +130,7 @@
 
 
                                                 <div class="form-check pl-4">
-                                                    <asp:CheckBox ID="cbIsActive" runat="server" Text="&nbsp; IsActive"
+                                                    <asp:CheckBox ID="cbIsActive" runat="server" Text="&nbsp; Hoạt động"
                                                         CssClass="form-check-input" />
                                                 </div>
 
@@ -162,7 +162,7 @@
                                                                         <th>Giá</th>
                                                                         <th>Số lượng</th>
                                                                         <th>Danh mục</th>
-                                                                        <th>IsActive</th>
+                                                                        <th>Trạng thái</th>
                                                                         <th>Mô tả</th>
                                                                         <th>Ngày tạo</th>
                                                                         <th class="datatable-nosort">Hành động</th>
