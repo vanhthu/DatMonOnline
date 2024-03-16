@@ -7,7 +7,6 @@
 2. Nuget Package Manager
 3. Package Manager Console
 
-// abcdefgh
 
 Cuối cùng paste đường dẫn bên dưới => ENTER
 
