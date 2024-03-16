@@ -29,7 +29,7 @@
                                 <th>Tên món ăn</th>
                                 <th>Giá</th>
                                 <th>Số lượng</th>
-                                <th>Tổng tiền:</th>
+                                <th>Tổng tiền</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -40,9 +40,9 @@
                     <tr>
                         <%-- số seri để định danh hóa đơn --%>
                         <td><%# Eval("soseri") %></td>
-                        <td><%# Eval("madonhang") %></td>
-                        <td><%# Eval("ten") %></td> 
-                        <td><%# string.IsNullOrEmpty(Eval("gia").ToString()) ? "" :"VNĐ"+Eval("gia") %></td>
+                        <td><%# Eval("sodonhang") %></td>
+                        <td><%# Eval("name") %></td> 
+                        <td><%# string.IsNullOrEmpty(Eval("gia").ToString()) ? "" :"VNĐ "+Eval("gia") %></td>
                         <td><%# Eval("soluong") %></td>
                         <td><%# Eval("tongtien") %></td>
                     </tr>
@@ -54,8 +54,9 @@
             </asp:Repeater>
 
             <div class="text-center">
-                <asp:LinkButton ID="lbTaiXuongHoaDon" runat="server" CssClass="btn btn-info">
-                    <i class="fa fa-file-pdf-o mr-2"></i> Tải xuống</asp:LinkButton>
+                <asp:LinkButton ID="lbTaiXuongHoaDon" runat="server" CssClass="btn btn-info" OnClick="lbTaiXuongHoaDon_Click">
+                    <i class="fa fa-file-pdf-o mr-2"></i> Tải xuống
+                </asp:LinkButton>
             </div>
             
         </div>

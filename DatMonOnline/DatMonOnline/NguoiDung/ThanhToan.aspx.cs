@@ -142,7 +142,7 @@ namespace DatMonOnline.NguoiDung
                 lblMessage.Visible = true;
                 lblMessage.Text = "Đặt hàng thành công";
                 lblMessage.CssClass = "alert alert-success";
-                Response.AddHeader("REFRESH", "1;URL=HoaDon.aspx?id" + paymentID);
+                Response.AddHeader("REFRESH", "1;URL=HoaDon.aspx?id=" + paymentID);
             }
             catch (Exception e)
             {
